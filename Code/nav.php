@@ -25,7 +25,9 @@
 
             <li class="searchbar">
                 <input type="search" name="search" id="search" placeholder="Search..">
+
             </li>
+
             <li>
                 <a class="nav_page_link-login" href="login.php">Inloggen</a>
             </li>
