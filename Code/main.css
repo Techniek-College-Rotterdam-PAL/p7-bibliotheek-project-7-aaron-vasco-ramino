@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #131313;
+}
+
+nav {
+  margin: 0;
+  padding: 4px;
+}
+
+.Navbar_color {
+  background-color: black;
+}
+
+nav.Navbar_color ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.Navbar_color ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.searchbar input[type="search"] {
+  width: 50%;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 12px;
+}
+
+.logo {
+  width: 50px;
+  height: 40px;
+}
+.nav_page_link {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.nav_page_link-login {
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  padding-left: 7em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.nav_page_link-register {
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  padding-right: 3em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/*NAV CSS END */
+
+form.createaccount {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 20px;
+}
+
+input.create_account_input {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  width: 20%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 20px;
+}
+
+h1.account {
+  font-size: 31px;
+}
+
+input.submit_account {
+  background-color: black;
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  border-radius: 50px;
+  margin-top: 20px;
+  width: 20%;
+  padding: 12px;
+}
+
+input.submit_account:hover {
+  cursor: pointer;
+}
+div.session {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+form.create_book {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 6px;
+}
+input.create_book_input {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  width: 20%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 20px;
+}
+input.create_book_input_img {
+  color: white;
+  margin-top: 20px;
+}
+textarea.create_book_input {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  width: 20%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 20px;
+  height: 175px;
+}
+
+input.submit_book {
+  background-color: black;
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  border-radius: 50px;
+  margin-top: 20px;
+
+  width: 20%;
+  padding: 12px;
+}
+
+input.submit_book:hover {
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.tcrimg {
+  width: 65px;
+  height: 35px;
+}
+.copyright {
+  text-decoration: none;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+}
+.footer-names {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+}
+
+/* FOOTER END */
+
+/* books */
+
+div.book_container {
+  display: inline-flex;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
