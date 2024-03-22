@@ -16,11 +16,3 @@ function validateEmail() {
     return true;
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggle = document.getElementById("navbar-toggle");
-  const navbarItems = document.getElementById("navbar-items");
-
-  navbarToggle.addEventListener("click", function () {
-    navbarItems.classList.toggle("active");
-  });
-});

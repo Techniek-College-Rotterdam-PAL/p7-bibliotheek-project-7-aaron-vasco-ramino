@@ -7,6 +7,7 @@
     <title>Navbar</title>
     <link rel="stylesheet" href="main.css">
 </head>
+<?php require 'search.php' ?>
 
 <body>
     <nav class="Navbar_color">
@@ -24,7 +25,8 @@
             </li>
 
             <form class="searchbar">
-                <input type="search" name="search" id="search" placeholder="Search..">
+                <input type="search" name="search" id="search" placeholder="Search.." onkeyup="liveSearch(this.value)">
+                <div id="search-results"></div>
                 <button type="submit" class="search-button">Search</button>
             </form>
 
@@ -41,10 +43,8 @@
     </nav>
 
 
-
-
-
     <script src="main.js"></script>
+
 </body>
 
 </html>
