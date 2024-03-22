@@ -28,8 +28,17 @@ session_start();
     </div>
 
 
-<h1 class="main-page">Welkom!</h1> 
+<h1 class="main-page">Welkom bij de Bib!</h1> 
 
+
+<h2 class="main-page">Wie zijn wij?</h2>
+<p class="main-page">
+De Bib is een Bibliotheek die schoolboeken uitleent aan studenten <br>
+die door financiele redenen geen boeken kunnen aanschaffen.<br>
+Wij hebben  meer dan honderd boeken van verschillende schoolvakken<br>
+  op voorraad, zoals Nederlands, wiskunde, programmeren enz. 
+
+</p>
 
 
 

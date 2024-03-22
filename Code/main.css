@@ -106,6 +106,22 @@ h1.main-page {
   "Lucida Sans", Arial, sans-serif;
   text-align: center;
 }
+
+h2.main-page { 
+  margin-top: 60px;
+  color: aliceblue;
+font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+"Lucida Sans", Arial, sans-serif;
+text-align: center;}
+
+p.main-page { 
+  margin-top: 20px;
+  color: aliceblue;
+font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+"Lucida Sans", Arial, sans-serif;
+text-align: start;
+margin-left: 16px;}
+ 
 form.createaccount {
   color: white;
   display: flex;
