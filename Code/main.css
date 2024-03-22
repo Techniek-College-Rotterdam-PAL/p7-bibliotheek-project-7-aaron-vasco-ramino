@@ -73,6 +73,19 @@ nav.Navbar_color ul li {
 }
 /*NAV CSS END */
 
+/*HOOFDPAGINA*/
+.picture_with_text {
+  filter: brightness(0.50);
+  
+}
+/*EIND HOOFDPAGINA*/
+
+h1.main-page {
+  color: aliceblue;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
 form.createaccount {
   color: white;
   display: flex;

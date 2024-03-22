@@ -19,11 +19,18 @@ session_start();
 
 <body>
 
-<img src="../Images/bibliotheek.jpg" alt="foto van een boekenkast" width="100%" height="300px">
+
 
     <?php include 'nav.php';?>
 
-    
+    <div class="picture_with_text">
+    <img src="../Images/bibliotheek.jpg" alt="foto van een boekenkast" width="100%" height="500px">
+    </div>
+
+
+<h1 class="main-page">Welkom!</h1> 
+
+
 
 
 
