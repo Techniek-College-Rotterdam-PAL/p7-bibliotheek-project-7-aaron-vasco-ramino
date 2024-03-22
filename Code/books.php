@@ -48,6 +48,13 @@ foreach ($books as $book) {
     }
 
     echo $book['informatie_boek'];
+    echo "<div>Voorraad: " . $book['voorraad'] . "</div>";
+
+   echo  "<form action='reserve.php' methode='post'>" .  
+           "<button name='id' value='" . $book['id'] . $book['titel'] . $book['voorraad'] . "'>Reserveer</button>" .
+        "</form>";
+
+
 
     echo "</div></div>"; 
 }

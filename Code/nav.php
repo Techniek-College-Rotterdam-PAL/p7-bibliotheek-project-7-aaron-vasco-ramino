@@ -23,10 +23,10 @@
                 <a class="nav_page_link" href="books.php">Boeken</a>
             </li>
 
-            <li class="searchbar">
+            <form class="searchbar">
                 <input type="search" name="search" id="search" placeholder="Search..">
-
-            </li>
+                <button type="submit" class="search-button">Search</button>
+            </form>
 
             <li>
                 <a class="nav_page_link-login" href="login.php">Inloggen</a>
@@ -39,6 +39,9 @@
 
         </ul>
     </nav>
+
+
+
 
 
     <script src="main.js"></script>
