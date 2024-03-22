@@ -25,8 +25,8 @@
             </li>
 
             <form class="searchbar">
-                <input type="search" name="search" id="search" placeholder="Search.." onkeyup="liveSearch(this.value)">
-                <div id="search-results"></div>
+                <input type="search" name="search" id="search" placeholder="Search..">
+
                 <button type="submit" class="search-button">Search</button>
             </form>
 
@@ -34,7 +34,7 @@
                 <a class="nav_page_link-login" href="login.php">Inloggen</a>
             </li>
             <li>
-                <a class="nav_page_link-register" href="account_register.php">Registeren</a>
+                <a class="nav_page_link-login" href="account_register.php">Registeren</a>
             </li>
 
 
