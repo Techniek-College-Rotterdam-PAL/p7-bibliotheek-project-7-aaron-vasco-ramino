@@ -19,7 +19,7 @@ session_start();
 
 <body>
 
-<img src="../Images/bibliotheek.jpg" width="100%" length="300px"alt="foto van een boekenkast">
+<img src="../Images/bibliotheek.jpg" alt="foto van een boekenkast" width="100%" height="300px">
 
     <?php include 'nav.php';?>
 
