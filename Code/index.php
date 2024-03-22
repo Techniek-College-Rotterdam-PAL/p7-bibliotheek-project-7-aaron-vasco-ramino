@@ -16,8 +16,16 @@ session_start();
 
 </head>
 
+
 <body>
-    <?php include 'nav.php'; ?>
+
+<img src="../Images/bibliotheek.jpg" alt="foto van een boekenkast" width="100%" height="300px">
+
+    <?php include 'nav.php';?>
+
+    
+
+
 
 
 
