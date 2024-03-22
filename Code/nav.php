@@ -7,7 +7,10 @@
     <title>Navbar</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<?php require 'search.php' ?>
+
+
+ 
+
 
 <body>
     <nav class="Navbar_color">

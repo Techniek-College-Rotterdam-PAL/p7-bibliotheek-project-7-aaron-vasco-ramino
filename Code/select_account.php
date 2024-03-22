@@ -68,6 +68,8 @@ if(isset($_POST['submit'])){
 }
 
 
+
+$book 
 ?>
 
 </body>
