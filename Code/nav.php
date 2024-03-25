@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+         
+        $(document).ready(function(){
+            $('#search').on('input', function(e){
+                e.preventDefault();
+                var searchTerm = $(this).val();
+                if (searchTerm.trim() !== '') {
+                    $.ajax({
+                        url: 'search.php',
+                        method: 'POST',
+                        data: { search: searchTerm },
+                        success: function(response){
+                            $('#search-results').html(response);
+                        }
+                    });
+                } else {
+                    $('#search-results').html('');
+                }
+            });
+        });
+    </script>
 </head>
-
-
- 
-
-
 <body>
     <nav class="Navbar_color">
         <ul>
@@ -26,13 +44,12 @@
             <li>
                 <a class="nav_page_link" href="books.php">Boeken</a>
             </li>
-
-            <form class="searchbar">
+            <form class="searchbar" id="searchform" name="searchform" method="post" action="search.php">
                 <input type="search" name="search" id="search" placeholder="Search..">
-
-                <button type="submit" class="search-button">Search</button>
-            </form>
-
+                <input type="submit" value="Search" class="search-button">
+                <div class="searchresults" id="search-results"></div>
+              </form>
+           
             <li>
                 <a class="nav_page_link-login" href="login.php">Inloggen</a>
             </li>
@@ -46,8 +63,6 @@
     </nav>
 
 
-    <script src="main.js"></script>
 
 </body>
-
 </html>

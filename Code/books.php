@@ -13,8 +13,8 @@
    include 'session_function.php';
   require_once 'db.php';
  
- include 'select_books.php';
-  
+
+require_once 'select_books.php';
 ?>
 
 

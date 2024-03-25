@@ -49,7 +49,6 @@ class Updatestock {
             return;
         }
 
-
         $updatedStock = $this->stock - 1;
 
         $query = "UPDATE boeken SET voorraad = :voorraad WHERE id = :id";
@@ -65,24 +64,36 @@ class Updatestock {
 if(isset($_POST['submit'])){
     $first_name = $_SESSION['voornaam'];
     $last_name = $_SESSION['achternaam'];
-    $titel = $_POST['titel'];
-    $id = $_POST['id'];
-    $stock = $_POST['voorraad'];
+    $id = $_POST['submit']; 
     $current_time = date('Y-m-d H:i:s');
-  
 
-    
-    if ($stock <= 0) {
-        echo "Error: Stock is zero or less. Cannot reserve the book.";
+    echo $id;
+
+   
+    $query = "SELECT titel, voorraad FROM boeken WHERE id = :id";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($row) {
+        $titel = $row['titel'];
+        $stock = $row['voorraad'];
+
+        if ($stock <= 0) {
+            echo "Error: Stock is zero or less. Cannot reserve the book.";
+        } else {
+          
+            $reserve = new Reserve($conn, $first_name, $last_name, $titel, $current_time);
+            $reserve->Reserve();
+
+           
+            $updatestock = new Updatestock($conn, $id, $stock);
+            $updatestock->Updatestock();
+        }
     } else {
-        $reserve = new Reserve($conn, $first_name, $last_name, $titel, $current_time);
-        $reserve->Reserve();
-
-        $updatestock = new Updatestock($conn, $id, $stock);
-        $updatestock->Updatestock();
+        echo "Error: Book not found.";
     }
 }
+
 ?>
-
-
-

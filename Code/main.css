@@ -95,6 +95,21 @@ li a {
   border-radius: 20px 0 0 20px;
 }
 
+div.searchresults{
+  color: white;
+  overflow: hidden;
+  font-family:"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", ;
+  background-color:black;
+  border: none;
+  outline: none;
+  position: absolute;
+  margin-left:120px ;
+  width: 320px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 /*NAV CSS END */
 
 form.createaccount {
