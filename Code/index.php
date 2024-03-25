@@ -42,10 +42,11 @@ Wij hebben  meer dan honderd boeken van verschillende schoolvakken<br>
 
 <h2 class="main-page">Wat te doen</h2>
 <p class="main-page">
-Bij de bib is er veel te doen, je kunt met de zoekbalk zoeken naar meer dan honderd titels.<br>
-Is er een boek die je nodig hebt voor school of dewoon leuk vindt? Dan kan je deze reserveren, maar eerst moet jij inloggen<br>
-of een account aanmaken als jij nog geen account hebt voordat jij een van onze boeken mag reserveren.
-
+Bij de bib is er veel te doen, je kunt met de zoekbalk zoeken naar <br>
+meer dan honderd titels. Is er een boek die je nodig hebt voor school of<br>
+leuk vindt? Dan kan je deze reserveren, maar eerst moet jij inloggen of een <br>
+account aanmaken als jij nog geen account hebt voordat jij een van onze<br>
+boeken mag reserveren.
 </p>
 
 

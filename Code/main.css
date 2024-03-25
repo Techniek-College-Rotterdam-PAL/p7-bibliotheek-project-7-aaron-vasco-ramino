@@ -257,7 +257,7 @@ h2.main-page {
   color: rgb(255, 255, 255);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 p.main-page {
@@ -265,6 +265,7 @@ p.main-page {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
+  text-align: center;
   
 }
 .main-page {
