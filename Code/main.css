@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #131313;
-
 }
 nav {
   display: flex;
@@ -40,14 +39,17 @@ li a {
   width: 50px;
   height: 40px;
   padding-right: 35px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+  padding-top: 4px;
+  display: flex;
+  justify-content: center;
 }
 
 .searchbar {
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 8px;
-  width: 35%;
+  width: 43%;
   padding: 20px;
 }
 .searchbar input[type="search"] {
@@ -63,7 +65,7 @@ li a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
-  padding-right: 70px;
+  padding-right: 60px;
 }
 
 .nav_page_link-login {
@@ -71,7 +73,7 @@ li a {
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
   padding: 25px;
-  padding-left: 50px;
+  padding-right: 70px;
 }
 
 .search-button {
