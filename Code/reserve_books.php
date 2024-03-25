@@ -8,20 +8,24 @@ class Reserve {
     private $first_name;
     private $last_name;
     private $titel;
+    private $current_time;
 
-    public function __construct($conn, $first_name, $last_name, $titel) {
+    public function __construct($conn, $first_name, $last_name, $titel, $current_time) { 
         $this->conn = (new Database_connect())->Connect();
         $this->first_name = $first_name;
         $this->last_name = $last_name;
         $this->titel = $titel;
+        $this->current_time = $current_time;
     }
+      
 
     public function Reserve() {
-        $query = "INSERT INTO reserveren (voornaam, achternaam, titel) VALUES (:voornaam, :achternaam, :titel)";
+        $query = "INSERT INTO reserveren (voornaam, achternaam, titel, time) VALUES (:voornaam, :achternaam, :titel, :time)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':voornaam', $this->first_name, PDO::PARAM_STR);
         $stmt->bindParam(':achternaam', $this->last_name, PDO::PARAM_STR);
         $stmt->bindParam(':titel', $this->titel, PDO::PARAM_STR);
+        $stmt->bindParam(':time', $this->current_time, PDO::PARAM_STR);
         $stmt->execute();
 
         echo "U heeft het boek gereserveerd";
@@ -45,6 +49,7 @@ class Updatestock {
             return;
         }
 
+
         $updatedStock = $this->stock - 1;
 
         $query = "UPDATE boeken SET voorraad = :voorraad WHERE id = :id";
@@ -63,12 +68,14 @@ if(isset($_POST['submit'])){
     $titel = $_POST['titel'];
     $id = $_POST['id'];
     $stock = $_POST['voorraad'];
+    $current_time = date('Y-m-d H:i:s');
+  
 
     
     if ($stock <= 0) {
         echo "Error: Stock is zero or less. Cannot reserve the book.";
     } else {
-        $reserve = new Reserve($conn, $first_name, $last_name, $titel);
+        $reserve = new Reserve($conn, $first_name, $last_name, $titel, $current_time);
         $reserve->Reserve();
 
         $updatestock = new Updatestock($conn, $id, $stock);

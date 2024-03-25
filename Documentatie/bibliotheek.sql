@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 21 mrt 2024 om 09:07
+-- Gegenereerd op: 25 mrt 2024 om 08:36
 -- Serverversie: 10.4.28-MariaDB
 -- PHP-versie: 8.0.28
 
@@ -45,7 +45,8 @@ INSERT INTO `account` (`id`, `voornaam`, `achternaam`, `email`, `wachtwoord`) VA
 (4, 'admin3', 'admin3', 'admin3@student.zadkine.nl', '$2y$10$uS1Uv6RCBltOnbI1TFJieuSWZlt529MAtqSIawqxexYIXrKpcL.GG'),
 (5, 'admin4', 'admin4', 'admin4@student.zadkine.nl', '$2y$10$mchfv8tO/zzsoQ7ZND.iDOvyhN/wav/B5do3O41PjAiuwoccuHmt6'),
 (6, 'admin5', 'admin5', 'admin5@student.zadkine.nl', '$2y$10$/NVWcELcnfXoNVenLPquFeAJg7fW0RMvVsS7qNC9kD/cfC4qg65Ny'),
-(10, 'taco', 'vrca', '9019327@student.zadkine.nl', '$2y$10$6Me5HWLD/.sRPaVYt98LPeKJu18upAboTEUdoDQG.GZMzRNrEKNfa');
+(10, 'taco', 'vrca', '9019327@student.zadkine.nl', '$2y$10$6Me5HWLD/.sRPaVYt98LPeKJu18upAboTEUdoDQG.GZMzRNrEKNfa'),
+(11, 'admin7', 'admin7', 'admin7@student.zadkine.nl', '$2y$10$.iQQhjaKebay18/mtznzce1q63CkF.G0aZCEbS.ULJuDBdk0UfVjW');
 
 -- --------------------------------------------------------
 
@@ -62,6 +63,7 @@ CREATE TABLE `boeken` (
   `boekjaar` varchar(50) NOT NULL,
   `informatie_boek` varchar(1000) NOT NULL,
   `img` varchar(100) NOT NULL,
+  `voorraad` int(50) NOT NULL,
   `beschikbaar/niet_beschikbaar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -69,8 +71,30 @@ CREATE TABLE `boeken` (
 -- Gegevens worden geëxporteerd voor tabel `boeken`
 --
 
-INSERT INTO `boeken` (`id`, `titel`, `isbn`, `schrijver`, `uitgever`, `boekjaar`, `informatie_boek`, `img`, `beschikbaar/niet_beschikbaar`) VALUES
-(37, 'test', 'test', 'test', 'test', 'test', 'test', 'somali-forehead-ai.png', '');
+INSERT INTO `boeken` (`id`, `titel`, `isbn`, `schrijver`, `uitgever`, `boekjaar`, `informatie_boek`, `img`, `voorraad`, `beschikbaar/niet_beschikbaar`) VALUES
+(38, 'test', '2390823', 'help', 'van dijk', '2017', 'test', 'vicious vultures.png', 8, '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `reserveren`
+--
+
+CREATE TABLE `reserveren` (
+  `id` int(11) NOT NULL,
+  `voornaam` varchar(100) NOT NULL,
+  `achternaam` varchar(100) NOT NULL,
+  `titel` varchar(100) NOT NULL,
+  `time` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `reserveren`
+--
+
+INSERT INTO `reserveren` (`id`, `voornaam`, `achternaam`, `titel`, `time`) VALUES
+(1, 'admin', 'admin', 'test', '2024-03-22'),
+(2, 'admin', 'admin', 'test', '2024-03-22');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -89,6 +113,12 @@ ALTER TABLE `boeken`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `reserveren`
+--
+ALTER TABLE `reserveren`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -96,13 +126,19 @@ ALTER TABLE `boeken`
 -- AUTO_INCREMENT voor een tabel `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT voor een tabel `boeken`
 --
 ALTER TABLE `boeken`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
+--
+-- AUTO_INCREMENT voor een tabel `reserveren`
+--
+ALTER TABLE `reserveren`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

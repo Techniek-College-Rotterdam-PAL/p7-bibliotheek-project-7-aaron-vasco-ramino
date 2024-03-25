@@ -30,14 +30,14 @@ foreach ($books as $book) {
 
     if (!empty($book['img'])) {
         $imagePath = $book['img'];
-        echo '<img src="upload/' . $imagePath . '" width="100" height="100" class="book_image"><br>';
+        echo '<img src="upload/' . $imagePath . '" width="100" height="100" class="book_image" alt="img_book" ><br>';
     }
 
     echo $book['informatie_boek'];
     echo "<div>Voorraad: " . $book['voorraad'] . "</div>";
 
 
-    echo "<form method='post' action='reserve.php'>";
+    echo "<form method='post' action='reserve_books.php'>";
     echo "<input type='hidden' name='id' value='" . $book['id'] . "'>";
     echo "<input type='hidden' name='titel' value='" . $book['titel'] . "'>";
     echo "<input type='hidden' name='voorraad' value='" . $book['voorraad'] . "'>";
