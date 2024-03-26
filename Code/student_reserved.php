@@ -36,20 +36,12 @@
     
     foreach ($reservedBooksArray as $reservedbook) {
 
-        
-        echo "<div> Voornaam: " . $reservedbook['voornaam'] . "</div><div> Achternaam: " .  $reservedbook['achternaam'] . "</div>" .  
-             "<div>" . $reservedbook['titel'] . "</div>" .
-             "<div>" . $reservedbook['time'] . "</div>";
+
+        echo "<div> Voornaam: " . $reservedbook['voornaam'] . " Achternaam: " . $reservedbook['achternaam'] . " Titel: " . $reservedbook['titel'] . " Time: " . $reservedbook['time'] . "</div>";
+    
+
     }
-    
-
-    
-    
-
-
-
-    
-    
+      
 
     ?>
 
