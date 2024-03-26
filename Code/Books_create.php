@@ -12,31 +12,32 @@
 </head>
 
 <body>
-    <?php 
+    <?php
 
-require_once 'db.php';
-include 'nav.php';
-?>
+    require_once 'db.php';
+    include 'nav_docent.php';
+    include 'session_function.php'
+    ?>
 
     <form class="create_book" method="post" action="insert_books.php" enctype="multipart/form-data">
         <h1 class="account">Nieuw boek toevoegen</h1>
-        <input class="create_account_input"  placeholder="titel" required name="title" id="title">
+        <input class="create_account_input" placeholder="titel" required name="title" id="title">
         <div name=""></div>
         <input class="create_book_input" type="text" placeholder="isbn" required name="isbn">
         <input class="create_book_input" type="text" placeholder="schrijver" required name="writer">
         <input class="create_book_input" type="text" placeholder="uitgever" required name="publisher">
         <input class="create_book_input" type="text" placeholder="boekjaar" required name="release_year">
-        <textarea class="create_book_input" cols="100" rows="100"placeholder="Samenvatting" required name="book_information"></textarea>
+        <textarea class="create_book_input" cols="100" rows="100" placeholder="Samenvatting" required name="book_information"></textarea>
         <input class="create_book_input" type="text" placeholder="Voorraad" required name="amount">
         <input class="create_book_input_img" type="file" placeholder="afbeelding" required name="image">
-        
-    
-    
-          <input class="submit_book" type="submit" value="toevoegen" name="submit">
+
+
+
+        <input class="submit_book" type="submit" value="toevoegen" name="submit">
     </form>
 
     <?php
-         include 'footer.php';
+    include 'footer.php';
     ?>
 
     <script src="main.js"></script>
