@@ -20,26 +20,15 @@ class Searchhandler {
     }
 
     public function search($query) {
-        $sqlTitle = "SELECT * FROM boeken WHERE titel LIKE :query_title";
-        $stmtTitle = $this->conn->prepare($sqlTitle);
-        $searchParamTitle = "%$query%";
-        $stmtTitle->bindParam(':query_title', $searchParamTitle, PDO::PARAM_STR);
-        $stmtTitle->execute();
-        $resultsTitle = $stmtTitle->fetchAll(PDO::FETCH_ASSOC);
-    
-        $sqlWriter = "SELECT * FROM boeken WHERE schrijver LIKE :query_writer";
-        $stmtWriter = $this->conn->prepare($sqlWriter);
-        $searchParamWriter = "%$query%";
-        $stmtWriter->bindParam(':query_writer', $searchParamWriter, PDO::PARAM_STR);
-        $stmtWriter->execute();
-        $resultsWriter = $stmtWriter->fetchAll(PDO::FETCH_ASSOC);
-    
-     
-        $results = array_merge($resultsTitle, $resultsWriter);
-    
+        $sql = "SELECT * FROM boeken WHERE titel LIKE :query_title OR schrijver LIKE :query_writer";
+        $stmt = $this->conn->prepare($sql);
+        $searchParam = "%$query%";
+        $stmt->bindParam(':query_title', $searchParam, PDO::PARAM_STR);
+        $stmt->bindParam(':query_writer', $searchParam, PDO::PARAM_STR);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
-    
 }
 
 $searchHandler = new Searchhandler($conn);
@@ -51,8 +40,8 @@ if(isset($_POST['search'])) {
     if ($searchResults) {
         foreach ($searchResults as $row) {
             echo "<div class='result'>";
-            echo "<p>{$row['titel']}</p>";
-            echo "<p>{$row['schrijver']}</p>";
+            echo  "<p>Titel: {$row['titel']}</p>";
+            echo "<p> Schrijver: {$row['schrijver']}</p>";
             echo "</div>";
         }
     } else {
