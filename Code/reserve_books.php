@@ -9,22 +9,25 @@ class Reserve {
     private $last_name;
     private $titel;
     private $current_time;
+    private $isbn;
 
-    public function __construct($conn, $first_name, $last_name, $titel, $current_time) { 
+    public function __construct($conn, $first_name, $last_name, $titel, $current_time, $isbn) { 
         $this->conn = (new Database_connect())->Connect();
         $this->first_name = $first_name;
         $this->last_name = $last_name;
         $this->titel = $titel;
         $this->current_time = $current_time;
+        $this->isbn = $isbn;
     }
       
 
     public function Reserve() {
-        $query = "INSERT INTO reserveren (voornaam, achternaam, titel, time) VALUES (:voornaam, :achternaam, :titel, :time)";
+        $query = "INSERT INTO reserveren (voornaam, achternaam, titel,isbn, time) VALUES (:voornaam, :achternaam, :titel, :isbn,  :time)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':voornaam', $this->first_name, PDO::PARAM_STR);
         $stmt->bindParam(':achternaam', $this->last_name, PDO::PARAM_STR);
         $stmt->bindParam(':titel', $this->titel, PDO::PARAM_STR);
+        $stmt->bindParam(':isbn', $this->isbn, PDO::PARAM_STR);
         $stmt->bindParam(':time', $this->current_time, PDO::PARAM_STR);
         $stmt->execute();
 
@@ -70,7 +73,7 @@ if(isset($_POST['submit'])){
     echo $id;
 
    
-    $query = "SELECT titel, voorraad FROM boeken WHERE id = :id";
+    $query = "SELECT titel, voorraad, isbn FROM boeken WHERE id = :id";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
@@ -79,12 +82,13 @@ if(isset($_POST['submit'])){
     if ($row) {
         $titel = $row['titel'];
         $stock = $row['voorraad'];
+        $isbn = $row['isbn'];
 
         if ($stock <= 0) {
             echo "Error: Stock is zero or less. Cannot reserve the book.";
         } else {
           
-            $reserve = new Reserve($conn, $first_name, $last_name, $titel, $current_time);
+            $reserve = new Reserve($conn, $first_name, $last_name, $titel, $current_time, $isbn);
             $reserve->Reserve();
 
            
