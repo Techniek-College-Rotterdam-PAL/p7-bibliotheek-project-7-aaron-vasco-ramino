@@ -41,10 +41,13 @@
 
 
             <li>
-                <a class="nav_page_link" href="books_create.php">Docent</a>
+                <a class="nav_page_link" href="student_reserved.php">gereserveerde boeken</a>
             </li>
             <li>
-                <a class="nav_page_link" href="books.php">Boeken</a>
+                <a class="nav_page_link" href="docent.php">Docent</a>
+            </li>
+            <li>
+                <a class="nav_page_link" href="books_create.php">Boeken-aanmaken</a>
             </li>
             <form class="searchbar" id="searchform" name="searchform" method="post" action="search.php">
                 <input type="search" name="search" id="search" placeholder="Search..">
