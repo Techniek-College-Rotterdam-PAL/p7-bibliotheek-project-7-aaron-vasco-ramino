@@ -21,7 +21,7 @@ $books = $boekenmanager->Selectallbooks();
 foreach ($books as $book) {
     echo "<div class='book_container'>" .  
             "<div class='books'>" .  
-                    $book['id']  .  "<br>" .
+                    
                     $book['titel']  .   
                  "<div>ISBN: "  .   $book['isbn'] . "</div>"  . "<br>" .
                     $book['schrijver'] . "<br>" .
