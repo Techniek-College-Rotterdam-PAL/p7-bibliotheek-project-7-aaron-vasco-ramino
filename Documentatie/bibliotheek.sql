@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 25 mrt 2024 om 08:36
+-- Gegenereerd op: 28 mrt 2024 om 09:52
 -- Serverversie: 10.4.28-MariaDB
 -- PHP-versie: 8.0.28
 
@@ -72,7 +72,13 @@ CREATE TABLE `boeken` (
 --
 
 INSERT INTO `boeken` (`id`, `titel`, `isbn`, `schrijver`, `uitgever`, `boekjaar`, `informatie_boek`, `img`, `voorraad`, `beschikbaar/niet_beschikbaar`) VALUES
-(38, 'test', '2390823', 'help', 'van dijk', '2017', 'test', 'vicious vultures.png', 8, '');
+(45, 'sherk', '3232', 'henk', 'tets', 'test', 'etst', 'giftest.gif', 0, ''),
+(46, 'frozen', 'wdw', 'frozen', 'wdwd', 'wdwd', 'wdw', 'giftest.gif', 0, ''),
+(47, 'hond', 'hond', 'hond', 'hond', 'hond', 'hond', 'giftest.gif', 0, ''),
+(48, 'suiker', 'k', 'k', 'w', '2017', 'w', '', 0, ''),
+(49, 'test', '23234', '2wdwdwd', 'wdwd', 'wdwd', 'wdwd', 'giftest.gif', 0, ''),
+(50, 'sherk', 'sherk', 'sherk', 'sherk', 'sherk', 'sherk', 'giftest.gif', 3, ''),
+(51, 'Sherek', 'Sherek', 'Sherek', 'Sherek', 'Sherek', 'Sherek', 'foto-twitter.png', 0, '');
 
 -- --------------------------------------------------------
 
@@ -82,19 +88,22 @@ INSERT INTO `boeken` (`id`, `titel`, `isbn`, `schrijver`, `uitgever`, `boekjaar`
 
 CREATE TABLE `reserveren` (
   `id` int(11) NOT NULL,
+  `boek_id` int(11) NOT NULL,
+  `account_id` int(11) NOT NULL,
   `voornaam` varchar(100) NOT NULL,
   `achternaam` varchar(100) NOT NULL,
   `titel` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `isbn` int(11) NOT NULL,
+  `time` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `reserveren`
 --
 
-INSERT INTO `reserveren` (`id`, `voornaam`, `achternaam`, `titel`, `time`) VALUES
-(1, 'admin', 'admin', 'test', '2024-03-22'),
-(2, 'admin', 'admin', 'test', '2024-03-22');
+INSERT INTO `reserveren` (`id`, `boek_id`, `account_id`, `voornaam`, `achternaam`, `titel`, `isbn`, `time`) VALUES
+(8, 51, 1, 'admin', 'admin', 'Sherek', 0, '2024-03-28'),
+(9, 51, 1, 'admin', 'admin', 'Sherek', 0, '2024-03-28');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -116,7 +125,9 @@ ALTER TABLE `boeken`
 -- Indexen voor tabel `reserveren`
 --
 ALTER TABLE `reserveren`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `boeken` (`boek_id`),
+  ADD KEY `account` (`account_id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
@@ -132,13 +143,24 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT voor een tabel `boeken`
 --
 ALTER TABLE `boeken`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT voor een tabel `reserveren`
 --
 ALTER TABLE `reserveren`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- Beperkingen voor geëxporteerde tabellen
+--
+
+--
+-- Beperkingen voor tabel `reserveren`
+--
+ALTER TABLE `reserveren`
+  ADD CONSTRAINT `account` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `boeken` FOREIGN KEY (`boek_id`) REFERENCES `boeken` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
