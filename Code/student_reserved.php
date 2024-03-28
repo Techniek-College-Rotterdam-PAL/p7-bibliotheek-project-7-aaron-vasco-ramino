@@ -15,7 +15,8 @@
     include 'session_function.php';
     require_once 'db.php';
 
-    class Reservedbooks {
+    class Reservedbooks
+    {
         private $conn;
 
         public function __construct($conn)
@@ -40,7 +41,7 @@
 
 
         echo "<div class='student_reserved'> id: " . "  Voornaam: " . $reservedbook['voornaam'] . " Achternaam: " . $reservedbook['achternaam'] . " Titel: " . $reservedbook['titel'] . " Time: " . $reservedbook['time'] .
-            "<p> </p>" .    '<button type="submit" class="search-button-reserve" name="submit">Click Me!</button>' . "</div>";
+            "<p> </p>" .    '<button type="submit" class="search-button-reserve" name="submit">Boek ingeleverd</button>' . "</div>";
     }
     require 'footer.php'
     ?>
