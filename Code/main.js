@@ -9,7 +9,7 @@ function validateEmail() {
 
   if (allowedDomains.indexOf(domain) === -1) {
     emailError = alert(
-      "Gebruik een geldig emailadres met het domein @student.zadkine.nl of @tcrmbo.nl of student.tcrmbo.nl."
+      "Gebruik een geldig emailadres met het domein @student.zadkine.nl of @tcrmbo.nl of @student.tcrmbo.nl."
     );
     return false;
   } else {

@@ -15,8 +15,7 @@
     include 'session_function.php';
     require_once 'db.php';
 
-    class Reservedbooks
-    {
+    class Reservedbooks {
         private $conn;
 
         public function __construct($conn)
@@ -26,7 +25,7 @@
 
         public function Selectreservedbooks()
         {
-            $query = "SELECT * FROM reserveren";
+            $query = "SELECT * FROM reserveren JOIN boeken ON reserveren.boek_id = boeken.id JOIN account ON reserveren.account_id = account.id";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -40,7 +39,7 @@
     foreach ($reservedBooksArray as $reservedbook) {
 
 
-        echo "<div class='student_reserved'> Voornaam: " . $reservedbook['voornaam'] . " Achternaam: " . $reservedbook['achternaam'] . " Titel: " . $reservedbook['titel'] . " Time: " . $reservedbook['time'] .
+        echo "<div class='student_reserved'> id: " . "  Voornaam: " . $reservedbook['voornaam'] . " Achternaam: " . $reservedbook['achternaam'] . " Titel: " . $reservedbook['titel'] . " Time: " . $reservedbook['time'] .
             "<p> </p>" .    '<button type="submit" class="search-button-reserve" name="submit">Click Me!</button>' . "</div>";
     }
     require 'footer.php'
