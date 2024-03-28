@@ -320,6 +320,28 @@ p.main-page {
   justify-content: center;
 }
 
+.contact-address {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  gap: 110px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  align-items: center;
+
+}
+h2.contact-title {
+  font-size: 30px;
+  margin-left: 10px;
+  color: #ccc;
+}
+/*images */
+.index-image {
+  margin-top: 60px;
+  margin-left: 380.5px;
+}
+
 .student_reserved {
   margin-top: 25px;
   border: 2px solid white;
@@ -346,3 +368,4 @@ p.main-page {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+

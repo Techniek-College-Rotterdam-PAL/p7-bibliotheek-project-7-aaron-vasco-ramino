@@ -29,8 +29,7 @@ session_start();
 
 
 <h1 class="main-page">Welkom bij de Bib!</h1> 
-
-
+<img class="index-image" src="../Images/cartoon-bibliotheek.jpg" alt="boeken in een kast" height="390px">
 <h2 class="main-page">Wie zijn wij?</h2>
 <p class="main-page">
 De Bib is een Bibliotheek die schoolboeken uitleent aan studenten <br>
@@ -39,6 +38,8 @@ Wij hebben  meer dan honderd schoolboeken<br>
   op voorraad zoals Nederlands, wiskunde, programmeren etc.
 </p>
 
+
+<div class="text-and-image">
 <h2 class="main-page">Wat te doen</h2>
 <p class="main-page">
 Bij de bib kun je boeken die je nodig hebt voor school lenen, ook hebben wij<br>
@@ -49,19 +50,23 @@ een account aanmaken als jij nog geen account hebt voordat jij een van onze boek
  mag reserveren.
 
 </p>
-
-<h2 class="main-page">Contact</h2>
-<p class="main-page">
+<div class="contact-address">
+<h2 class="contact-title">Contactgegevens</h2>
+<p >
 Heb jij vragen over hoe jij bijvoorbeeld een boek moet reserveren, of een<br>
 account kan aanmaken? Dan kun jij ons bereiken via telefoon of email<br>
 <br>
 Email: debib@contact.nl<br>
 Telefoonnummer: +31 683451790
 
-
-
 </p>
 
+<h2 class="contact-title">Adres</h2>
+<p>
+Hoogstraat 110<br>
+3011 PV Rotterdam
+</p>
+</div>
 
 
 
