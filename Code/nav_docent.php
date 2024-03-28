@@ -9,26 +9,26 @@
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('#search').on('input', function(e) {
-            e.preventDefault();
-            var searchTerm = $(this).val();
-            if (searchTerm.trim() !== '') {
-                $.ajax({
-                    url: 'search.php',
-                    method: 'POST',
-                    data: {
-                        search: searchTerm
-                    },
-                    success: function(response) {
-                        $('#search-results').html(response);
-                    }
-                });
-            } else {
-                $('#search-results').html('');
-            }
+        $(document).ready(function() {
+            $('#search').on('input', function(e) {
+                e.preventDefault();
+                var searchTerm = $(this).val();
+                if (searchTerm.trim() !== '') {
+                    $.ajax({
+                        url: 'search.php',
+                        method: 'POST',
+                        data: {
+                            search: searchTerm
+                        },
+                        success: function(response) {
+                            $('#search-results').html(response);
+                        }
+                    });
+                } else {
+                    $('#search-results').html('');
+                }
+            });
         });
-    });
     </script>
 </head>
 
@@ -41,25 +41,25 @@
 
 
             <li>
-                <a class="nav_page_link" href="student_reserved.php">gereserveerde boeken</a>
+                <a class="nav_page_link-docent" href="student_reserved.php">gereserveerde boeken</a>
             </li>
             <li>
-                <a class="nav_page_link" href="docent.php">Docent</a>
+                <a class="nav_page_link-docent" href="docent.php">Docent</a>
             </li>
             <li>
-                <a class="nav_page_link" href="books_create.php">Boeken-aanmaken</a>
+                <a class="nav_page_link-docent" href="books_create.php">Boeken-aanmaken</a>
             </li>
-            <form class="searchbar" id="searchform" name="searchform" method="post" action="search.php">
+            <form class="searchbar-docent" id="searchform" name="searchform" method="post" action="search.php">
                 <input type="search" name="search" id="search" placeholder="Search..">
                 <input type="submit" value="Search" class="search-button">
                 <div class="searchresults" id="search-results"></div>
             </form>
 
             <li>
-                <a class="nav_page_link-login" href="login.php">Inloggen</a>
+                <a class="nav_page_link-login-docent" href="login.php">Inloggen</a>
             </li>
             <li>
-                <a class="nav_page_link-login" href="account_register.php">Registeren</a>
+                <a class="nav_page_link-login-docent" href="account_register.php">Registeren</a>
             </li>
 
 

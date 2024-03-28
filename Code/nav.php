@@ -9,26 +9,26 @@
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('#search').on('input', function(e) {
-            e.preventDefault();
-            var searchTerm = $(this).val();
-            if (searchTerm.trim() !== '') {
-                $.ajax({
-                    url: 'search.php',
-                    method: 'POST',
-                    data: {
-                        search: searchTerm
-                    },
-                    success: function(response) {
-                        $('#search-results').html(response);
-                    }
-                });
-            } else {
-                $('#search-results').html('');
-            }
+        $(document).ready(function() {
+            $('#search').on('input', function(e) {
+                e.preventDefault();
+                var searchTerm = $(this).val();
+                if (searchTerm.trim() !== '') {
+                    $.ajax({
+                        url: 'search.php',
+                        method: 'POST',
+                        data: {
+                            search: searchTerm
+                        },
+                        success: function(response) {
+                            $('#search-results').html(response);
+                        }
+                    });
+                } else {
+                    $('#search-results').html('');
+                }
+            });
         });
-    });
     </script>
 </head>
 
@@ -41,7 +41,7 @@
 
 
             <li>
-                <a class="nav_page_link" href="books_create.php">Docent</a>
+                <a class="nav_page_link" href="docent.php">Docent</a>
             </li>
             <li>
                 <a class="nav_page_link" href="books.php">Boeken</a>

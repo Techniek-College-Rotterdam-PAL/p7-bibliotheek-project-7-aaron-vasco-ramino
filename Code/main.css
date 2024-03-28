@@ -46,10 +46,9 @@ li a {
 }
 
 .searchbar {
-  padding-left: 35px;
   padding-right: 35px;
   padding-top: 8px;
-  width: 43%;
+  width: 60%;
   padding: 20px;
 }
 .searchbar input[type="search"] {
@@ -65,7 +64,7 @@ li a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
-  padding-right: 60px;
+  padding-right: 85px;
 }
 
 .nav_page_link-login {
@@ -75,7 +74,40 @@ li a {
   padding: 25px;
   padding-right: 70px;
 }
+.searchbar-docent {
+  padding-right: 15px;
+  padding-top: 8px;
+  width: 60%;
+  padding: 20px;
+}
+.searchbar-docent input[type="search"] {
+  width: 50%;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 10px;
+  border-radius: 10px;
+}
 
+.nav_page_link-login-docent {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+  padding-right: 45px;
+}
+
+.nav_page_link-login-docent {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+  padding: 25px;
+  padding-right: 95px;
+}
+.nav_page_link-docent {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+}
 .search-button {
   padding: 5px 10px;
   border-style: solid;
@@ -97,14 +129,15 @@ li a {
 
 div.searchresults {
   color: white;
-  overflow: hidden;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
   background-color: black;
-  border: none;
-  outline: none;
+  border: thin;
+  border-radius: 12px;
+  border-color: white;
   position: absolute;
   margin-left: 120px;
-  width: 320px;
+  margin-top: 23px;
+  width: 25%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
