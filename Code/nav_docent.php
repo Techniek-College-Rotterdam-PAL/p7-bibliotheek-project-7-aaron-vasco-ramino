@@ -9,26 +9,26 @@
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#search').on('input', function(e) {
-                e.preventDefault();
-                var searchTerm = $(this).val();
-                if (searchTerm.trim() !== '') {
-                    $.ajax({
-                        url: 'search.php',
-                        method: 'POST',
-                        data: {
-                            search: searchTerm
-                        },
-                        success: function(response) {
-                            $('#search-results').html(response);
-                        }
-                    });
-                } else {
-                    $('#search-results').html('');
-                }
-            });
+    $(document).ready(function() {
+        $('#search').on('input', function(e) {
+            e.preventDefault();
+            var searchTerm = $(this).val();
+            if (searchTerm.trim() !== '') {
+                $.ajax({
+                    url: 'search.php',
+                    method: 'POST',
+                    data: {
+                        search: searchTerm
+                    },
+                    success: function(response) {
+                        $('#search-results').html(response);
+                    }
+                });
+            } else {
+                $('#search-results').html('');
+            }
         });
+    });
     </script>
 </head>
 
@@ -52,7 +52,7 @@
             <form class="searchbar-docent" id="searchform" name="searchform" method="post" action="search.php">
                 <input type="search" name="search" id="search" placeholder="Search..">
                 <input type="submit" value="Search" class="search-button">
-                <div class="searchresults" id="search-results"></div>
+                <div class="searchresults-docent" id="search-results"></div>
             </form>
 
             <li>
