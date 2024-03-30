@@ -56,6 +56,9 @@
             </form>
 
             <li>
+                <a class="nav_page_link-docent" href="books_available.php">boeken</a>
+
+            <li>
                 <a class="nav_page_link-login-docent" href="login.php">Inloggen</a>
             </li>
             <li>

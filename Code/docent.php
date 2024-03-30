@@ -12,7 +12,7 @@
 
     <?php 
 include 'nav_docent.php';
-include 'session_function.php';
+include 'session_function_docent.php';
 
 ?>
 

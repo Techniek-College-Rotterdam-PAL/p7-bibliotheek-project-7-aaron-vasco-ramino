@@ -306,8 +306,9 @@ input.submit_book:hover {
 
 div.book_container {
   display: inline-flex;
-  width: 200px;
+  width: 250px;
   margin: 10px;
+ margin-top:20px ;
   border: 1px solid #ccc;
   padding: 10px;
   color: white;
@@ -316,6 +317,24 @@ div.book_container {
 }
 
 /* BOOKS END */
+
+/* BOOKS AVAILABLE  */
+
+button.button_update_available{
+  border-radius:5px ;
+  border-color: white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    padding: 7px 10px;
+    margin-top:20px ;
+}
+
+
+/* BOOKS AVAILABLE END */
 
 /* STUDENT_RESERVED */
 form.delete_reserved{
@@ -355,6 +374,7 @@ div.succes_section{
 }
 div.succes{
   font-size: 20px;
+  margin-bottom:20px ;
 }
 
 a.back_reserved{
@@ -367,11 +387,9 @@ a.back_reserved{
   cursor: pointer;
   font-size: 15px;
   text-decoration: none;
-  width:40px ;
+  width:140px ;
 
 }
-
-
 
 .search-button-reserve {
   padding: 7px 10px;
@@ -418,10 +436,5 @@ p.main-page {
   align-items: center;
   justify-content: center;
 }
-
-
-
-
-
 
 /*MAIN PAGE END */

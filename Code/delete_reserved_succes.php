@@ -15,7 +15,7 @@
      ?>
     <div class="succes_section">
     <div class="succes">Boek is ingeleverd en de voorraad is geüpdatet.</div>
-    <a href="student_reserved.php" class="back_reserved">terug</a>
+    <a href="student_reserved.php" class="back_reserved">Terug naar overzicht</a>
      </div>
 
      <?php

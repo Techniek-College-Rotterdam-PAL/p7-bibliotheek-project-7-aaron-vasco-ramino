@@ -25,6 +25,7 @@ class Books_create {
     private $storage;
     private $conn;
 
+
     public function __construct($title, $isbn, $writer, $publisher, $release_year, $book_information, $image, $storage){
         $this->title = $title;
         $this->isbn = $isbn;
@@ -34,6 +35,7 @@ class Books_create {
         $this->book_information = $book_information;
         $this->image = $image;
         $this->storage = $storage;
+       
         $this->conn = (new Database_connect())->Connect();
     }
 

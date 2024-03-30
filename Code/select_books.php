@@ -8,7 +8,7 @@ class Books {
     }
 
     public function Selectallbooks() {
-        $query = "SELECT * FROM boeken";
+        $query = "SELECT * FROM boeken WHERE beschikbaarheid = 1";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
