@@ -145,6 +145,8 @@ div.searchresults {
 
 /*NAV CSS END */
 
+/* CREATE ACCOUNT */
+
 form.createaccount {
   color: white;
   display: flex;
@@ -193,6 +195,10 @@ div.session {
   justify-content: center;
   margin-top: 10px;
 }
+
+/* CREATE ACCOUNT END */
+
+/* CREATE BOOK */
 
 form.create_book {
   color: white;
@@ -245,6 +251,8 @@ input.submit_book:hover {
   cursor: pointer;
 }
 
+/* CREATE BOOK END */
+
 /* FOOTER */
 
 .footer {
@@ -278,7 +286,7 @@ input.submit_book:hover {
 
 /* FOOTER END */
 
-/* books */
+/* BOOKS */
 
 div.book_container {
   display: inline-flex;
@@ -290,6 +298,81 @@ div.book_container {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+/* BOOKS END */
+
+/* STUDENT_RESERVED */
+form.delete_reserved{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+ 
+}
+
+.student_reserved {
+  margin-top: 25px;
+  border: 2px solid white;
+  padding: 22px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 20px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+div.succes_section{
+  display: flex;
+ justify-content: flex-start;
+ flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    color: white;
+  margin-top: 50px;
+  margin-left:10px ;
+
+}
+div.succes{
+  font-size: 20px;
+}
+
+a.back_reserved{
+  padding: 7px 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  width:40px ;
+
+}
+
+
+
+.search-button-reserve {
+  padding: 7px 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* STUDENT_RESERVED END */
+
 
 /*MAIN PAGE */
 
@@ -320,29 +403,6 @@ p.main-page {
   justify-content: center;
 }
 
-.student_reserved {
-  margin-top: 25px;
-  border: 2px solid white;
-  padding: 22px;
-  margin-bottom: 10px;
-  color: white;
-  font-size: 20px;
-  padding-right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
 
-.search-button-reserve {
-  padding: 7px 10px;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: white;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  font-size: 15px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
+
+/*MAIN PAGE END */

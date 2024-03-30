@@ -21,7 +21,6 @@ class Session {
       "<div class='session'>Ingelogd als " . $_SESSION['voornaam'] . "</div>";
         "<div class='session'>Ingelogd als " . $_SESSION['achternaam'] . "</div>";
         "div> class= 'session>'" . $_SESSION['id'] . "</div>";
-        
   } else {
       echo "<div class='session'>Niet ingelogd</div>";
       header('Location: login.php');
