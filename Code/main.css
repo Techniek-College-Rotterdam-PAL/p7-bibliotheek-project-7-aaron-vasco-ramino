@@ -143,6 +143,22 @@ div.searchresults {
   flex-direction: column;
 }
 
+div.searchresults-docent {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  background-color: black;
+  border: thin;
+  border-radius: 12px;
+  border-color: white;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 23px;
+  width: 22%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 /*NAV CSS END */
 
 /* CREATE ACCOUNT */
