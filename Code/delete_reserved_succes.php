@@ -10,17 +10,16 @@
 
 <body>
     <?php
-include 'nav_docent.php';
-include 'session_function.php';
-?>
+   include 'nav_docent.php';
+   include 'session_function.php';
+     ?>
     <div class="succes_section">
     <div class="succes">Boek is ingeleverd en de voorraad is geüpdatet.</div>
     <a href="student_reserved.php" class="back_reserved">terug</a>
      </div>
 
      <?php
-include 'footer.php';
-
+    include 'footer.php';
      ?>
 
 </body>
