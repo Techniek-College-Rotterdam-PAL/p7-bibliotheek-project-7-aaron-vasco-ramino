@@ -12,6 +12,7 @@
     <?php
 
 require_once 'db.php';
+include 'session_function_docent.php';
  
 
 class Books_create {

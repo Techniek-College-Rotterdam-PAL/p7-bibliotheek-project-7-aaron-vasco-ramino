@@ -11,7 +11,7 @@
 <body>
 <?php
 include 'nav_docent.php';
-include 'session_function.php';
+include 'session_function_docent.php';
 require_once 'db.php';
 
  class Reservedbooks {

@@ -16,7 +16,7 @@
 
     require_once 'db.php';
     include 'nav_docent.php';
-    include 'session_function.php'
+    include 'session_function_docent.php';
     ?>
 
     <form class="create_book" method="post" action="insert_books.php" enctype="multipart/form-data">

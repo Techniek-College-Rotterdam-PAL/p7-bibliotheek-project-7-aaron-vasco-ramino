@@ -10,7 +10,7 @@
     <?php 
      
       include 'nav_docent.php';
-      require_once 'session_function.php';
+      require_once 'session_function_docent.php';
       require_once 'db.php';
       
       class Update_available{

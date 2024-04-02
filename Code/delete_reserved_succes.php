@@ -11,7 +11,7 @@
 <body>
     <?php
    include 'nav_docent.php';
-   include 'session_function.php';
+   include 'session_function_docent.php';
      ?>
     <div class="succes_section">
     <div class="succes">Boek is ingeleverd en de voorraad is geüpdatet.</div>

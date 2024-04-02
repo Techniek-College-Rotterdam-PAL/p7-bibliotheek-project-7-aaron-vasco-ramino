@@ -1,7 +1,7 @@
 <?php
 
 require_once 'db.php';
-include 'session_function.php';
+include 'session_function_docent.php';
 
 class Delete_reserved_Update_stock{
     private $conn;
