@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Search</title>
 </head>
 <body>
 
  <?php
-
 require_once "db.php";
-
-
-
-
 class Searchhandler {
     private $conn;
 
@@ -41,13 +37,37 @@ if(isset($_POST['search'])) {
 
     if ($searchresults) {
         foreach ($searchresults as $row) {
-            echo "<div class='result'>";
-            echo  "<p>Titel: {$row['titel']}</p>";
-            echo "<p> Schrijver: {$row['schrijver']}</p>";
-            echo "</div>";
-        }
-    } else {
-        echo "<p>No results found.</p>";
+          echo  "<div class='book_container2'>" .  
+            "<div class='result'>" .
+                  "<span>Titel:</span>" . " " . $row['titel']  . "<br>" .   
+                  "<span>ISBN:</span> "  .   $row['isbn'] .   "<br>".
+                 "<span>Schrijver:</span>" . " " .  $row['schrijver'] . "<br>" .
+                  "<span>Uitgever:</span>" . " " .   $row['uitgever'] .  "<br>" .
+                   "<span>Boekjaar:</span>" . " " . $row['boekjaar'] .  "<br>" .
+                   "<span>Titel:</span>" . " " . $row['titel']  . "<br>" .   
+                   "<span>ISBN:</span> "  .   $row['isbn'] .   "<br>";
+
+    if (!empty($row['img'])) {
+        $imagepath = $row['img'];
+        echo '<img src="upload/' . $imagepath . '" width="100" height="100" class="book_image" alt="img_book" ><br>';
+    }
+
+ else {
+    echo "<p>No results found.</p>";
+
+}
+         
+    echo "<span>Informatie:</span>" . " "  .  $row['informatie_boek'] . "<br>";
+
+    echo "<div class='search_reserve'>" . "Dit boek reserveren?" . "<br>" .
+    "<a class='reserve' href='books.php'>Reserveren</a><div>";
+
+    echo "</div></div>";
+
+   
+}
+
     }
 }
+
 ?>

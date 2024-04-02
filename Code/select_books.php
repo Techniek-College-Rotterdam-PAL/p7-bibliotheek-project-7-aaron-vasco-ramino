@@ -15,8 +15,8 @@ class Books {
     }
 }
 
-$boekenmanager = new Books($conn);
-$books = $boekenmanager->Selectallbooks();
+$booksmanager = new Books($conn);
+$books = $booksmanager->Selectallbooks();
 
 foreach ($books as $book) {
     echo "<div class='book_container'>" .  
@@ -29,8 +29,8 @@ foreach ($books as $book) {
                     $book['boekjaar'] .  "<br>";
 
     if (!empty($book['img'])) {
-        $imagePath = $book['img'];
-        echo '<img src="upload/' . $imagePath . '" width="100" height="100" class="book_image" alt="img_book" ><br>';
+        $imagepath = $book['img'];
+        echo '<img src="upload/' . $imagepath . '" width="100" height="100" class="book_image" alt="img_book" ><br>';
     }
 
     echo $book['informatie_boek'];
@@ -43,5 +43,5 @@ foreach ($books as $book) {
      . "</form>";
 
 
-    echo "</div></div>"; 
+    echo "</div></div></div></div>"; 
 }
