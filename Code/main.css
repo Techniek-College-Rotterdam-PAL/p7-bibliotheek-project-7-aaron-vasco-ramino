@@ -316,6 +316,46 @@ input.submit_book:hover {
     color: white;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
+
+button.reserve{
+  display: inline-block; 
+    margin-top: 10px;
+    padding: 7px 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+}
+
+h1.success_reserved{
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-top: 40px;
+  font-size: 20px;
+  margin-left:25px ;
+}
+a.reserve_success{
+  display: inline-block; 
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left:25px ;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+}
   
 
 

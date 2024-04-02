@@ -93,12 +93,14 @@ if(isset($_POST['submit'])){
 
         if ($stock <= 0) {
             echo "Error: Stock is zero or less. Cannot reserve the book.";
+            header("Location: books_reserved_error.php");
         } else {
             $reserve = new Reserve($conn, $id, $account_id, $first_name, $last_name, $titel, $current_time, $isbn);
             $reserve->Reserve();
 
             $updatestock = new Updatestock($conn, $id, $stock);
             $updatestock->Updatestock();
+            header("Location: books_reserved_success.php");
         }
     } else {
         echo "Error: Book not found.";

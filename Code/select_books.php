@@ -38,7 +38,7 @@ foreach ($books as $book) {
 
 
     echo "<form method='post' action='reserve_books.php'>";
-    echo "<button name='submit' value='" . $book['id']  . "' class=''>reserveren</button>"
+    echo "<button class='reserve' name='submit' value='" . $book['id']  . "' class=''>reserveren</button>"
 
      . "</form>";
 
