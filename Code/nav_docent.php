@@ -21,11 +21,11 @@
                         search: searchTerm
                     },
                     success: function(response) {
-                        $('#search-results').html(response);
+                        $('#search-results-docent').html(response);
                     }
                 });
             } else {
-                $('#search-results').html('');
+                $('#search-results-docent').html('');
             }
         });
     });
@@ -52,11 +52,11 @@
             <form class="searchbar-docent" id="searchform" name="searchform" method="post" action="search.php">
                 <input type="search" name="search" id="search" placeholder="Search..">
                 <input type="submit" value="Search" class="search-button">
-                <div class="searchresults-docent" id="search-results"></div>
+                <div class="searchresults-docent" id="search-results-docent"></div>
             </form>
 
             <li>
-                <a class="nav_page_link-docent" href="books_available.php">boeken</a>
+                <a class="nav_page_link-login-docent" href="books_available.php">boeken</a>
 
             <li>
                 <a class="nav_page_link-login-docent" href="login.php">Inloggen</a>

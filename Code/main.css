@@ -75,13 +75,13 @@ li a {
   padding-right: 70px;
 }
 .searchbar-docent {
-  padding-right: 15px;
+  padding-right: 35px;
   padding-top: 8px;
-  width: 60%;
+  width: 44%;
   padding: 20px;
 }
 .searchbar-docent input[type="search"] {
-  width: 50%;
+  width: 55%;
   border: none;
   padding: 0.5rem;
   font-size: 1rem;
@@ -93,7 +93,7 @@ li a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
-  padding-right: 45px;
+  padding-right: 20px;
 }
 
 .nav_page_link-login-docent {
@@ -101,7 +101,7 @@ li a {
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
   padding: 25px;
-  padding-right: 95px;
+  padding-right: 50px;
 }
 .nav_page_link-docent {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -151,9 +151,9 @@ div.searchresults-docent {
   border-radius: 12px;
   border-color: white;
   position: absolute;
-  margin-left: 120px;
-  margin-top: 23px;
-  width: 22%;
+  margin-left: 78px;
+  margin-top: 20px;
+  width: 20.7%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -308,7 +308,7 @@ div.book_container {
   display: inline-flex;
   width: 250px;
   margin: 10px;
- margin-top:20px ;
+  margin-top: 20px;
   border: 1px solid #ccc;
   padding: 10px;
   color: white;
@@ -320,8 +320,8 @@ div.book_container {
 
 /* BOOKS AVAILABLE  */
 
-button.button_update_available{
-  border-radius:5px ;
+button.button_update_available {
+  border-radius: 5px;
   border-color: white;
   background-color: black;
   color: white;
@@ -329,22 +329,20 @@ button.button_update_available{
   font-size: 15px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    padding: 7px 10px;
-    margin-top:20px ;
+  padding: 7px 10px;
+  margin-top: 20px;
 }
-
 
 /* BOOKS AVAILABLE END */
 
 /* STUDENT_RESERVED */
-form.delete_reserved{
+form.delete_reserved {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
- 
 }
 
 .student_reserved {
@@ -361,23 +359,22 @@ form.delete_reserved{
   gap: 15px;
 }
 
-div.succes_section{
+div.succes_section {
   display: flex;
- justify-content: flex-start;
- flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    color: white;
+  color: white;
   margin-top: 50px;
-  margin-left:10px ;
-
+  margin-left: 10px;
 }
-div.succes{
+div.succes {
   font-size: 20px;
-  margin-bottom:20px ;
+  margin-bottom: 20px;
 }
 
-a.back_reserved{
+a.back_reserved {
   padding: 7px 10px;
   border-style: solid;
   border-radius: 10px;
@@ -387,8 +384,7 @@ a.back_reserved{
   cursor: pointer;
   font-size: 15px;
   text-decoration: none;
-  width:140px ;
-
+  width: 140px;
 }
 
 .search-button-reserve {
@@ -406,7 +402,6 @@ a.back_reserved{
 }
 
 /* STUDENT_RESERVED END */
-
 
 /*MAIN PAGE */
 
