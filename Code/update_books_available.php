@@ -22,13 +22,13 @@ require_once 'db.php';
     }
 
     public function Update_available_books() {
-        $currentAvailability = $this->Select_available();
-        $newAvailability = ($currentAvailability['beschikbaarheid'] == 1) ? 0 : 1; 
+        $currentavailability = $this->Select_available();
+        $newavailability = ($currentavailability['beschikbaarheid'] == 1) ? 0 : 1; 
     
         $query = "UPDATE boeken SET beschikbaarheid = :beschikbaarheid WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $this->id);
-        $stmt->bindParam(':beschikbaarheid', $newAvailability);
+        $stmt->bindParam(':beschikbaarheid', $newavailability);
         $stmt->execute();
         return $stmt->rowCount(); 
     }
