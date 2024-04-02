@@ -6,9 +6,11 @@
     <title>Search</title>
 </head>
 <body>
-    <?php
+
+ <?php
 
 require_once "db.php";
+
 
 
 
@@ -22,23 +24,23 @@ class Searchhandler {
     public function search($query) {
         $sql = "SELECT * FROM boeken WHERE titel LIKE :query_title OR schrijver LIKE :query_writer";
         $stmt = $this->conn->prepare($sql);
-        $searchParam = "%$query%";
-        $stmt->bindParam(':query_title', $searchParam, PDO::PARAM_STR);
-        $stmt->bindParam(':query_writer', $searchParam, PDO::PARAM_STR);
+        $searchparam = "%$query%";
+        $stmt->bindParam(':query_title', $searchparam, PDO::PARAM_STR);
+        $stmt->bindParam(':query_writer', $searchparam, PDO::PARAM_STR);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
 }
 
-$searchHandler = new Searchhandler($conn);
+$searchhandler = new Searchhandler($conn);
 
 if(isset($_POST['search'])) {
-    $searchTerm = $_POST['search']; 
-    $searchResults = $searchHandler->search($searchTerm); 
+    $searchterm = $_POST['search']; 
+    $searchresults = $searchhandler->search($searchterm); 
 
-    if ($searchResults) {
-        foreach ($searchResults as $row) {
+    if ($searchresults) {
+        foreach ($searchresults as $row) {
             echo "<div class='result'>";
             echo  "<p>Titel: {$row['titel']}</p>";
             echo "<p> Schrijver: {$row['schrijver']}</p>";
