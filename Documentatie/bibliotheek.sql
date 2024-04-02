@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 28 mrt 2024 om 09:52
+-- Gegenereerd op: 02 apr 2024 om 10:38
 -- Serverversie: 10.4.28-MariaDB
 -- PHP-versie: 8.0.28
 
@@ -46,7 +46,9 @@ INSERT INTO `account` (`id`, `voornaam`, `achternaam`, `email`, `wachtwoord`) VA
 (5, 'admin4', 'admin4', 'admin4@student.zadkine.nl', '$2y$10$mchfv8tO/zzsoQ7ZND.iDOvyhN/wav/B5do3O41PjAiuwoccuHmt6'),
 (6, 'admin5', 'admin5', 'admin5@student.zadkine.nl', '$2y$10$/NVWcELcnfXoNVenLPquFeAJg7fW0RMvVsS7qNC9kD/cfC4qg65Ny'),
 (10, 'taco', 'vrca', '9019327@student.zadkine.nl', '$2y$10$6Me5HWLD/.sRPaVYt98LPeKJu18upAboTEUdoDQG.GZMzRNrEKNfa'),
-(11, 'admin7', 'admin7', 'admin7@student.zadkine.nl', '$2y$10$.iQQhjaKebay18/mtznzce1q63CkF.G0aZCEbS.ULJuDBdk0UfVjW');
+(11, 'admin7', 'admin7', 'admin7@student.zadkine.nl', '$2y$10$.iQQhjaKebay18/mtznzce1q63CkF.G0aZCEbS.ULJuDBdk0UfVjW'),
+(12, 'Ramino', 'Vrca', 'admin@student.zadkine.nl', '$2y$10$lopxsSRHEfJ30O.vp0mpf.mudvgE1sRmC2UZP.cTCtBVANc3R8sbW'),
+(13, 'admin', 'admin', 'admin@tcrmbo.nl', '$2y$10$R/GTTv8hkPt.AYMcLGiEqupsqIlw9GE3cpUb9o6EMiKVLqE2.7ifK');
 
 -- --------------------------------------------------------
 
@@ -64,21 +66,17 @@ CREATE TABLE `boeken` (
   `informatie_boek` varchar(1000) NOT NULL,
   `img` varchar(100) NOT NULL,
   `voorraad` int(50) NOT NULL,
-  `beschikbaar/niet_beschikbaar` varchar(100) NOT NULL
+  `beschikbaarheid` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `boeken`
 --
 
-INSERT INTO `boeken` (`id`, `titel`, `isbn`, `schrijver`, `uitgever`, `boekjaar`, `informatie_boek`, `img`, `voorraad`, `beschikbaar/niet_beschikbaar`) VALUES
-(45, 'sherk', '3232', 'henk', 'tets', 'test', 'etst', 'giftest.gif', 0, ''),
-(46, 'frozen', 'wdw', 'frozen', 'wdwd', 'wdwd', 'wdw', 'giftest.gif', 0, ''),
-(47, 'hond', 'hond', 'hond', 'hond', 'hond', 'hond', 'giftest.gif', 0, ''),
-(48, 'suiker', 'k', 'k', 'w', '2017', 'w', '', 0, ''),
-(49, 'test', '23234', '2wdwdwd', 'wdwd', 'wdwd', 'wdwd', 'giftest.gif', 0, ''),
-(50, 'sherk', 'sherk', 'sherk', 'sherk', 'sherk', 'sherk', 'giftest.gif', 3, ''),
-(51, 'Sherek', 'Sherek', 'Sherek', 'Sherek', 'Sherek', 'Sherek', 'foto-twitter.png', 0, '');
+INSERT INTO `boeken` (`id`, `titel`, `isbn`, `schrijver`, `uitgever`, `boekjaar`, `informatie_boek`, `img`, `voorraad`, `beschikbaarheid`) VALUES
+(1, 'wdw', 'wdwd', 'wdwd', 'wdwd', 'wdw', 'wdwd', 'gear.png', 2, 1),
+(2, 'test', 'test', 'test', 'test', 'test', 'test', 'gear.png', 2, 0),
+(3, 'sherk', 'sherk', 'sherk', 'sherksherk', 'sherk', 'sherk', 'giftest.gif', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -102,8 +100,7 @@ CREATE TABLE `reserveren` (
 --
 
 INSERT INTO `reserveren` (`id`, `boek_id`, `account_id`, `voornaam`, `achternaam`, `titel`, `isbn`, `time`) VALUES
-(8, 51, 1, 'admin', 'admin', 'Sherek', 0, '2024-03-28'),
-(9, 51, 1, 'admin', 'admin', 'Sherek', 0, '2024-03-28');
+(3, 3, 13, 'admin', 'admin', 'sherk', 0, '2024-03-30');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -137,19 +134,19 @@ ALTER TABLE `reserveren`
 -- AUTO_INCREMENT voor een tabel `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT voor een tabel `boeken`
 --
 ALTER TABLE `boeken`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT voor een tabel `reserveren`
 --
 ALTER TABLE `reserveren`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Beperkingen voor geëxporteerde tabellen

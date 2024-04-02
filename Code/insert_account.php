@@ -21,7 +21,7 @@ class Insert_data_account{
         $this->conn = (new Database_connect())->Connect();
 
     }
-
+    
     public function insert($first_name, $last_name, $email, $password){
 
         $query = "INSERT INTO account (voornaam, achternaam, email, wachtwoord) VALUES (:voornaam, :achternaam, :email, :password)";
