@@ -17,7 +17,7 @@ if (!isset($_SESSION['email'])) {
 $email = $_SESSION['email'];
 
 if (!Hasaccess($email)) {
-    header('Location: access_denied.php');
+    header('Location: ../account/access_denied.php');
     exit();
 }
 
@@ -34,7 +34,7 @@ class Session {
              "<div class='session'>Ingelogd als " . $_SESSION['id'] . "</div>";
         } else {
             echo "<div class='session'>Niet ingelogd</div>";
-            header('Location: login.php');
+            header('Location: ../Code/login.php');
             exit();
         }
     }

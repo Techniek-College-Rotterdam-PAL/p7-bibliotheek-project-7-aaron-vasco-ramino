@@ -514,3 +514,27 @@ div.search_reserve{
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
   
+  /* ACCESS DENIED */
+
+
+  h1.access_denied {
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+      margin-top: 50px;
+      margin-left: 25px;
+  }
+
+  a.access_denied {
+  padding: 7px 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  margin-top:10px ;
+  width: 158px;
+  }

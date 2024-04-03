@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../Code/main.css">
     <title>Account aanmaken</title>
 </head>
 
 <body>
     <?php
-    require_once 'db.php';
-
-    include 'nav.php';
+    // include database connection
+    require_once '../Code/db.php';
+    // include the navigation bar
+    include '../Code/nav.php';
+    
 
     ?>
     <form class="createaccount" onsubmit=" return validateEmail()" method="post" action="../account/insert_account.php">
@@ -29,8 +31,11 @@
 
 
 
-<?php include 'footer.php'; ?>
-    <script src="main.js"></script>
+    <?php 
+    // include the footer
+  include '../Code/footer.php'; 
+   ?>
+    <script src="../Code/main.js"></script>
 
 </body>
 

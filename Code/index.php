@@ -1,5 +1,5 @@
 <?php
-
+// start session
 session_start();
 ?>
 
@@ -11,15 +11,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Code/main.css">
     <title>Document</title>
-
 </head>
-
-
 <body>
 
-
-
-    <?php include '../Code/nav.php';?>
+ <?php 
+ // include the navigation bar
+ include '../Code/nav.php'; 
+ ?>
 
     <div class="picture_with_text">
     <img src="../Images/bibliotheek.jpg" alt="foto van een boekenkast" width="100%" height="500px">
@@ -66,23 +64,14 @@ Hoogstraat 110<br>
 </p>
 </div>
 
-
-
-
-
-
-
-
-
-    <?php
-    include 'footer.php';
-    ?>
+ <?php 
+ // include the footer
+ include 'footer.php'; ?>
 </body>
-
 </html>
 
 <?php
-
+// destroy the session
 session_destroy();
 
 ?>
