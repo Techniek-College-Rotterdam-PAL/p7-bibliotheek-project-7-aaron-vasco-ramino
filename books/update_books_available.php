@@ -1,6 +1,6 @@
 <?php
-require_once 'session_function_docent.php';
-require_once 'db.php';
+require_once '../account/session_function_docent.php';
+require_once '../Code/db.php';
 
 
 
@@ -50,6 +50,6 @@ if (isset($_POST['submit'])) {
     }
 }
 
-header('Location: books_available.php');
+header('Location: ../books/books_available.php');
 
 

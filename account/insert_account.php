@@ -1,7 +1,7 @@
 
 <?php
 
-require_once 'db.php';
+require_once '../Code/db.php';
 
 
  
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
 
 }
 
-header("Location: login.php");
+header("Location: ../Code/login.php");
 exit();
 
 

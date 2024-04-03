@@ -1,7 +1,7 @@
 <?php
 
-require_once 'session_function.php';
-require_once 'db.php';
+require_once '../account/session_function.php';
+require_once '../Code/db.php';
 
 class Reserve {
     private $conn;
@@ -93,14 +93,14 @@ if(isset($_POST['submit'])){
 
         if ($stock <= 0) {
             echo "Error: Stock is zero or less. Cannot reserve the book.";
-            header("Location: books_reserved_error.php");
+            header("Location: ../reserve/books_reserved_error.php");
         } else {
             $reserve = new Reserve($conn, $id, $account_id, $first_name, $last_name, $titel, $current_time, $isbn);
             $reserve->Reserve();
 
             $updatestock = new Updatestock($conn, $id, $stock);
             $updatestock->Updatestock();
-            header("Location: books_reserved_success.php");
+            header("Location: ../reserve/books_reserved_success.php");
         }
     } else {
         echo "Error: Book not found.";

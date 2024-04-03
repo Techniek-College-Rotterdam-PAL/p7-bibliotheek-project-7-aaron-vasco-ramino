@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../Code/main.css">
     <title>Document</title>
 </head>
 
 <body>
     <?php
 
-require_once 'db.php';
-include 'session_function_docent.php';
+require_once '../Code/db.php';
+include '../account/session_function_docent.php';
  
 
 class Books_create {
@@ -53,7 +53,7 @@ class Books_create {
         $stmt->bindParam(':storage', $this->storage);
 
        
-        $img_upload = "upload/";
+        $img_upload = "../Code/upload/";
         $targetFilePath = $img_upload . basename($_FILES["image"]["name"]);
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
 }
 
 
-header('Location: Books.php');
+header("Location: ../books/Books_available.php");
 exit;
 
 ?>

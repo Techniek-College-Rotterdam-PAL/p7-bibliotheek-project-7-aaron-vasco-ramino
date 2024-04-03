@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../Code/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
 <body>
     <?php
 
-    require_once 'db.php';
-    include 'nav_docent.php';
-    include 'session_function_docent.php';
+    require_once '../Code/db.php';
+    include '../Code/nav_docent.php';
+    include '../account/session_function_docent.php';
     ?>
 
-    <form class="create_book" method="post" action="insert_books.php" enctype="multipart/form-data">
+    <form class="create_book" method="post" action="../books/insert_books.php" enctype="multipart/form-data">
         <h1 class="account">Nieuw boek toevoegen</h1>
         <input class="create_account_input" placeholder="titel" required name="title" id="title">
         <div name=""></div>
@@ -37,10 +37,10 @@
     </form>
 
     <?php
-    include 'footer.php';
+    include '../Code/footer.php';
     ?>
 
-    <script src="main.js"></script>
+    <script src="../Code/main.js"></script>
 </body>
 
 </html>

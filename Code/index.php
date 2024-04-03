@@ -1,8 +1,6 @@
 <?php
 
 session_start();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +9,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../Code/main.css">
     <title>Document</title>
 
 </head>
@@ -21,7 +19,7 @@ session_start();
 
 
 
-    <?php include 'nav.php';?>
+    <?php include '../Code/nav.php';?>
 
     <div class="picture_with_text">
     <img src="../Images/bibliotheek.jpg" alt="foto van een boekenkast" width="100%" height="500px">

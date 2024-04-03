@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../Code/main.css">
 </head>
 
 <body>
 <?php
-include 'nav_docent.php';
-include 'session_function_docent.php';
-require_once 'db.php';
+include '../Code/nav_docent.php';
+include '../account/session_function_docent.php';
+require_once '../Code/db.php';
 
  class Reservedbooks {
     private $conn;
@@ -35,12 +35,12 @@ $reservedBooks = $reservedbooks->Selectreservedbooks();
 foreach ($reservedBooks as $reservedbook) {
     echo "<div class='student_reserved'>  Voornaam: " . $reservedbook['voornaam'] . " Achternaam: " . $reservedbook['achternaam'] . 
     " Titel: " . $reservedbook['titel'] . " Isbn: " . $reservedbook['isbn'] . " Time: " . $reservedbook['time'] .
-       "<form method='post' action='delete_reserved.php'>" . 
+       "<form method='post' action='../reserve/delete_reserved.php'>" . 
        "<button name='submit_book' value='" . $reservedbook['id']  . "' class='search-button-reserve'>Boek ingeleverd</button>" .
                "</div>";
 }
 
-require 'footer.php';
+require '../Code/footer.php';
 ?>
 
 

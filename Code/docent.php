@@ -11,8 +11,8 @@
 <body>
 
     <?php 
-include 'nav_docent.php';
-include 'session_function_docent.php';
+include '../Code/nav_docent.php';
+include '../account/session_function_docent.php';
 
 ?>
 

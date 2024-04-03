@@ -1,7 +1,7 @@
 <?php
 
-require_once 'db.php';
-include 'session_function_docent.php';
+require_once '../Code/db.php';
+include '../account/session_function_docent.php';
 
 class Delete_reserved_Update_stock{
     private $conn;
@@ -34,7 +34,7 @@ class Delete_reserved_Update_stock{
         $stmt->bindParam(':book_id', $book_id['boek_id']);
         $stmt->execute();
 
-        header('Location: delete_reserved_succes.php');
+        header('Location: ../Reserve/delete_reserved_succes.php');
 }
 
 }

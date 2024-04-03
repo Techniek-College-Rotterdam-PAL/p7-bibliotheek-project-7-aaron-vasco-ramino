@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-require_once 'db.php';
+require_once '../Code/db.php';
 
 session_start();
 
@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
     $select->Select();
 
     if ($select->loginSuccess) {
-        header("Location: books.php");
+        header("Location:../books/books.php");
         exit();
     }
 }
