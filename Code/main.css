@@ -211,13 +211,12 @@ div.session {
   justify-content: center;
   margin-top: 10px;
 }
-div.email_password_error{
+div.email_password_error {
   color: red;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    margin-top: 10px;
-    font-size:15px ;
-
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 /* CREATE ACCOUNT END */
@@ -312,44 +311,56 @@ input.submit_book:hover {
 
 /* BOOKS */
 
-
-  div.book_container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: 250px;
-    margin: 10px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    color: white;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  }
-
-button.reserve{
-  display: inline-block; 
-    margin-top: 10px;
-    padding: 7px 10px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: white;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    text-decoration: none;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-
+div.book_container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 10px;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  padding: 20px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-h1.success_reserved{
+.select_books {
+  columns: 100px 8;
+  direction: rtl;
+  padding: 10px;
+}
+img.book_image {
+  display: flex;
+  position: relative;
+  float: left;
+}
+
+button.reserve {
+  margin-right: -135px;
+  margin-top: 170px;
+  padding: 7px 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
   color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1.success_reserved {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   margin-top: 40px;
   font-size: 20px;
-  margin-left:25px ;
+  margin-left: 25px;
 }
-a.reserve_success{
-  display: inline-block; 
+a.reserve_success {
+  display: inline-block;
   margin-top: 10px;
   padding: 7px 10px;
   border-style: solid;
@@ -360,12 +371,10 @@ a.reserve_success{
   cursor: pointer;
   font-size: 15px;
   text-decoration: none;
-  margin-left:25px ;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-
+  margin-left: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-  
-
 
 /* BOOKS END */
 
@@ -484,7 +493,7 @@ p.main-page {
   align-items: center;
   justify-content: center;
 }
-.index-image{
+.index-image {
   text-align: center;
 }
 
@@ -502,43 +511,19 @@ div.book_container2 {
   border: 1px solid #ccc;
   padding: 10px;
   color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  white-space: pre-wrap; 
-  overflow-wrap: break-word; 
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
-div.search_reserve{
-  margin-top:30px ;
-
+div.search_reserve {
+  margin-top: 30px;
 }
 
-  a.reserve {
-    display: inline-block; 
-    margin-top: 10px;
-    padding: 7px 10px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: white;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    text-decoration: none;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  }
-  
-  /* ACCESS DENIED */
-
-
-  h1.access_denied {
-    color: white;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-      margin-top: 50px;
-      margin-left: 25px;
-  }
-
-  a.access_denied {
+a.reserve {
+  display: inline-block;
+  margin-top: 10px;
   padding: 7px 10px;
   border-style: solid;
   border-radius: 10px;
@@ -548,6 +533,30 @@ div.search_reserve{
   cursor: pointer;
   font-size: 15px;
   text-decoration: none;
-  margin-top:10px ;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* ACCESS DENIED */
+
+h1.access_denied {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+a.access_denied {
+  padding: 7px 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  margin-top: 10px;
   width: 158px;
-  }
+}
