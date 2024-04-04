@@ -1,7 +1,5 @@
 <?php
 
-
-
 // Definieer de Books-klasse
 class Books{
     // Eigenschappen van de klasse

@@ -9,14 +9,18 @@
 <body>
 <?php
 
+
+ // defineer de klasse Session
 class Session {
-
+    // Constructor methode om de eigenschappen van de klasse in te stellen
    function __construct() {
-   $this->start();
-}
+    $this->start();
 
+}
+  // Methode om de sessie te starten
  function start() {
   
+    // Start de sessie
   session_start();
   if(isset($_SESSION['email'])){
       echo "<div class='session'>Ingelogd als " . $_SESSION['email'] . "</div>";
