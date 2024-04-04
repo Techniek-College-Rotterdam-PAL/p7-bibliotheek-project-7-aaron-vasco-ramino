@@ -30,10 +30,14 @@ session_start();
 </div>
 <h2 class="main-page">Wie zijn wij?</h2>
 <p class="main-page">
-De Bib is een digitale en fysieke bibliotheek die schoolboeken<br>
- uitleent aan studenten die door financiele redenen geen boeken <br>
- kunnen aanschaffen. Wij hebben  meer dan honderd schoolboeken<br>
-op voorraad zoals Nederlands, wiskunde, programmeren etc.  <br><br>
+Soms kan het zijn dat door financiele redenen een student zijn boeken niet<br>
+ kan aanschaffen. hier zijn soms wel zogenaamde ‘potjes’ voor maar de aanvraag<br>
+  hiervan kan lang duren of soms voldoet een student net niet aan de eisen. <br>
+Hierdoor is de Bib ontstaan. De Bib is een digitale administratie website met<br>
+ een fysieke bibliotheek die schoolboeken uitleent aan studenten die door <br>
+ financiele redenen geen boeken kunnen aanschaffen.  Wij hebben  meer dan <br>
+ honderd schoolboeken op voorraad zoals Nederlands, wiskunde, programmeren,<br>
+burgerschap etc.<br><br>
 Zoek jij geen schoolboeken? dan kun jij op onze bibliotheek <br>
 normale boeken uitleenen van verschillende genres zoals drama,<br>
 thrillers, misdaad, poëzie en nog veel meer! 
@@ -51,12 +55,13 @@ een account aanmaken als jij nog geen account hebt voordat jij een van onze boek
  mag reserveren.
 
 </p>
+
 <div class="contact-address">
 <h2 class="contact-title">Contactgegevens</h2>
-<p >
-Heb jij vragen over hoe jij bijvoorbeeld een boek moet reserveren, of een<br>
-account kan aanmaken? Dan kun jij ons bereiken via telefoon of email<br>
-<br>
+<p > 
+Heb jij vragen over hoe jij bijvoorbeeld een boek<br>
+ moet reserveren of een account kan aanmaken? <br>
+ Dan kun jij ons bereiken via telefoon of email<br><br>
 Email: debib@contact.nl<br>
 Telefoonnummer: +31 683451790
 

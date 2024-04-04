@@ -497,6 +497,21 @@ p.main-page {
   text-align: center;
 }
 
+.contact-address {
+  margin-top: 140px;
+  color: #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 140px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    align-content: center;
+}
+h2.contact-title {
+  font-weight: bolder;
+  color: white;
+}
 /*MAIN PAGE END */
 
 /*BOOKS SEARCH */
