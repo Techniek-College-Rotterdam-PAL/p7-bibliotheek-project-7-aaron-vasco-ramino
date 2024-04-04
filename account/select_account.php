@@ -19,13 +19,13 @@ class Select_data_account {
     private $email;
     private $wachtwoord;
     private $conn;
-    public $loginSuccess;
+    public $loginsuccess;
 
-   public function __construct($email, $wachtwoord){
+   public function __construct($email, $wachtwoord, $conn){
         $this->email = $email;
         $this->wachtwoord = $wachtwoord;
-        $this->conn = (new Database_connect())->Connect();
-        $this->loginSuccess = false; 
+        $this->conn = $conn;
+        $this->loginsuccess = false; 
     }
 
     public function Select(){
@@ -33,35 +33,45 @@ class Select_data_account {
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
         $stmt->execute();
-
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if($row){
-            if(password_verify($this->wachtwoord, $row['wachtwoord'])){
+    
+        $found = false; 
+    
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            if (password_verify($this->wachtwoord, $row['wachtwoord'])) {
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['voornaam'] = $row['voornaam'];
                 $_SESSION['achternaam'] = $row['achternaam'];
                 $_SESSION['id'] = $row['id'];
-                $this->loginSuccess = true; 
-            } else {
-                echo "Wachtwoord is onjuist";
-                
+                $found = true; 
+                break;
             }
+        }
+    
+        if ($found) {
+            $this->loginsuccess = true; 
         } else {
             
-      echo "Email is onjuist";
-        } 
+            $error_message = urlencode("Wachtwoord of email is onjuist");
+            header("Location: ../Code/login.php?error={$error_message}");
+            exit();
+        }
     }
-}
+    
+        
+      } 
+    
+
+
+
 
 if(isset($_POST['submit'])){
     $email = strip_tags($_POST['email']);
     $wachtwoord = strip_tags($_POST['wachtwoord']);
 
-    $select = new Select_data_account($email, $wachtwoord);
+    $select = new Select_data_account($email, $wachtwoord, $conn);
     $select->Select();
 
-    if ($select->loginSuccess) {
+    if ($select->loginsuccess) {
         header("Location:../books/books.php");
         exit();
     }
@@ -69,8 +79,10 @@ if(isset($_POST['submit'])){
 
 
 
-$book 
+
 ?>
+
+<script src="../Code/main.js"></script>
 
 </body>
 </html>

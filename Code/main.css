@@ -211,6 +211,14 @@ div.session {
   justify-content: center;
   margin-top: 10px;
 }
+div.email_password_error{
+  color: red;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    margin-top: 10px;
+    font-size:15px ;
+
+}
 
 /* CREATE ACCOUNT END */
 
