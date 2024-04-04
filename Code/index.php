@@ -25,13 +25,18 @@ session_start();
 
 
 <h1 class="main-page">Welkom bij de Bib!</h1> 
-<img class="index-image" src="../Images/cartoon-bibliotheek.jpg" alt="boeken in een kast" height="390px">
+<div class="index-image">
+<img src="../Images/cartoon-bibliotheek.jpg" alt="boeken in een kast" height="390px" width="700px">
+</div>
 <h2 class="main-page">Wie zijn wij?</h2>
 <p class="main-page">
-De Bib is een Bibliotheek die schoolboeken uitleent aan studenten <br>
-die door financiele redenen geen boeken kunnen aanschaffen.<br>
-Wij hebben  meer dan honderd schoolboeken<br>
-  op voorraad zoals Nederlands, wiskunde, programmeren etc.
+De Bib is een digitale en fysieke bibliotheek die schoolboeken<br>
+ uitleent aan studenten die door financiele redenen geen boeken <br>
+ kunnen aanschaffen. Wij hebben  meer dan honderd schoolboeken<br>
+op voorraad zoals Nederlands, wiskunde, programmeren etc.  <br><br>
+Zoek jij geen schoolboeken? dan kun jij op onze bibliotheek <br>
+normale boeken uitleenen van verschillende genres zoals drama,<br>
+thrillers, misdaad, poëzie en nog veel meer! 
 </p>
 
 

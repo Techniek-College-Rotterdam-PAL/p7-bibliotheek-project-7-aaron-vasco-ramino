@@ -464,23 +464,28 @@ h1.main-page {
   font-size: 50px;
 }
 h2.main-page {
+  font-weight: bolder;
+  font-size: 30px;
   color: rgb(255, 255, 255);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 p.main-page {
   color: rgb(255, 255, 255);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
 }
 .main-page {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.index-image{
+  text-align: center;
 }
 
 /*MAIN PAGE END */
