@@ -11,11 +11,15 @@
 <body>
     <?php
 
+// bestand voor database connectie
 require_once '../Code/db.php';
+
+// bestand voor sessie
 include '../account/session_function_docent.php';
  
-
+// Definieer de Books_create-klasse
 class Books_create {
+    // Eigenschappen van de klasse
     private $title;
     private $isbn;
     private $writer;
@@ -26,8 +30,8 @@ class Books_create {
     private $storage;
     private $conn;
 
-
-    public function __construct($title, $isbn, $writer, $publisher, $release_year, $book_information, $image, $storage){
+   // Constructor methode om de eigenschappen van de klasse in te stellen
+    public function __construct($title, $isbn, $writer, $publisher, $release_year, $book_information, $image, $storage,$conn){
         $this->title = $title;
         $this->isbn = $isbn;
         $this->writer = $writer;
@@ -36,10 +40,9 @@ class Books_create {
         $this->book_information = $book_information;
         $this->image = $image;
         $this->storage = $storage;
-       
-        $this->conn = (new Database_connect())->Connect();
+        $this->conn = $conn;
     }
-
+    // Methode om gegevens in de database in te voegen
     public function Insertbooks(){
         $query = "INSERT INTO boeken (titel, isbn, schrijver, uitgever, boekjaar, informatie_boek, img, voorraad) VALUES (:title, :isbn, :writer, :publisher, :release_year, :book_information, :image, :storage)";
         $stmt = $this->conn->prepare($query);
@@ -52,16 +55,16 @@ class Books_create {
         $stmt->bindParam(':image', $this->image['name']);
         $stmt->bindParam(':storage', $this->storage);
 
-       
+       // Uploaden van de afbeelding
         $img_upload = "../Code/upload/";
-        $targetFilePath = $img_upload . basename($_FILES["image"]["name"]);
-        $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+        $targetfilepath = $img_upload . basename($_FILES["image"]["name"]);
+        $filetype = pathinfo($targetfilepath, PATHINFO_EXTENSION);
 
        
-        $allowedTypes = array('jpg', 'jpeg', 'png', 'gif');
+        $allowedtypes = array('jpg', 'jpeg', 'png', 'gif');
 
-        if (in_array($fileType, $allowedTypes)) {
-            if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)) {
+        if (in_array($filetype, $allowedtypes)) {
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetfilepath)) {
                 
                 $stmt->execute();
             } else {
@@ -72,7 +75,7 @@ class Books_create {
         }
     }
 }
-
+ // als het formulier word ingediend worden de gegevens opgehaald en word de Insertbooks aangeroepen om de gegevens in de database toe te voegen
 if(isset($_POST['submit'])){
     $title = strip_tags($_POST['title']);
     $isbn = strip_tags($_POST['isbn']);
@@ -87,7 +90,7 @@ if(isset($_POST['submit'])){
     $books->Insertbooks();
 }
 
-
+// Als de gegevens zijn toegevoegd aan de database, wordt de gebruiker doorgestuurd naar de boeken pagina
 header("Location: ../books/Books_available.php");
 exit;
 

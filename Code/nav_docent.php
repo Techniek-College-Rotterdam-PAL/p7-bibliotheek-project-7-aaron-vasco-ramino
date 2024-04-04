@@ -12,13 +12,13 @@
     $(document).ready(function() {
         $('#search').on('input', function(e) {
             e.preventDefault();
-            var searchTerm = $(this).val();
-            if (searchTerm.trim() !== '') {
+            var searchterm = $(this).val();
+            if (searchterm.trim() !== '') {
                 $.ajax({
                     url: '../books/search.php',
                     method: 'POST',
                     data: {
-                        search: searchTerm
+                        search: searchterm
                     },
                     success: function(response) {
                         $('#search-results-docent').html(response);

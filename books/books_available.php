@@ -8,18 +8,27 @@
 </head>
 <body>
     <?php 
-     
+        // bestand voor navigatiebalk
       include '../Code/nav_docent.php';
+
+      // bestand voor sessie
       require_once '../account/session_function_docent.php';
+
+      // bestand voor database connectie
       require_once '../Code/db.php';
       
+      // Definieer de Update_available-klasse
       class Update_available{
+        // Eigenschappen van de klasse
           private $conn;
-      
-          public function __construct(){
-              $this->conn = (new Database_connect())->Connect(); 
+          
+
+          // Constructor methode om de eigenschappen van de klasse in te stellen
+          public function __construct($conn){
+              $this->conn = $conn; 
           }
-      
+          
+          // Methode om gegevens in de database te selecteren
           public function Update_available_books(){
               $query = "SELECT * FROM boeken";
               $stmt = $this->conn->prepare($query);
@@ -28,10 +37,12 @@
           }
       }
       
-      $booksupdate = new Update_available();
+      // Maak een object van de klasse Update_available aan en roep de methode Update_available_books aan
+      $booksupdate = new Update_available($conn);
       $books = $booksupdate->Update_available_books();
       
    
+      // Loop door de gegevens en geef deze weer
     foreach ($books as $book) {
     echo "<div class='book_container'>" .  
         "<div class='books'>" .
@@ -42,8 +53,8 @@
         $book['boekjaar'] .  "<br>";
 
     if (!empty($book['img'])) {
-        $imagePath = $book['img'];
-        echo '<img src="../Code/upload/' . $imagePath . '" width="100" height="100" class="book_image" alt="img_book"><br>';
+        $imagepath = $book['img'];
+        echo '<img src="../Code/upload/' . $imagepath . '" width="100" height="100" class="book_image" alt="img_book"><br>';
     }
      
     echo  "Beschikbaarheid: " . ($book['beschikbaarheid'] ? 'Beschikbaar' : 'Niet-beschikbaar') . "<br>";

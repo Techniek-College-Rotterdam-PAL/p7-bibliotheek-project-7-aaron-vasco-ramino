@@ -552,6 +552,10 @@ a.reserve {
     "Lucida Sans", Arial, sans-serif;
 }
 
+img.img_search{
+  margin-top:10px ;
+}
+
 /* ACCESS DENIED */
 
 h1.access_denied {

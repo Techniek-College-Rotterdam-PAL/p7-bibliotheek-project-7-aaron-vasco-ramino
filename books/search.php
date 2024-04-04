@@ -9,14 +9,21 @@
 <body>
 
  <?php
+
+ // bestand voor database connectie
 require_once "../Code/db.php";
+
+// Definieer de klasse Searchhandler
 class Searchhandler {
+    // Eigenschappen van de klasse
     private $conn;
 
+    // Constructor methode om de eigenschappen van de klasse in te stellen
     public function __construct($conn) {
-        $this->conn =  (new Database_connect())->Connect();
+        $this->conn = $conn;
     }
-
+    
+    // Methode om gegevens in de database te selecteren
     public function search($query) {
         $sql = "SELECT * FROM boeken WHERE titel LIKE :query_title OR schrijver LIKE :query_writer";
         $stmt = $this->conn->prepare($sql);
@@ -29,12 +36,16 @@ class Searchhandler {
     }
 }
 
+ // Maak een object van de klasse Searchhandler aan
 $searchhandler = new Searchhandler($conn);
 
+// Als er op de zoekknop is geklikt, voer dan de zoekmethode uit en geef de resultaten weer in een div
 if(isset($_POST['search'])) {
     $searchterm = $_POST['search']; 
     $searchresults = $searchhandler->search($searchterm); 
 
+
+     // Als er resultaten zijn, worden deze in een div weergegeven
     if ($searchresults) {
         foreach ($searchresults as $row) {
             echo "<div class='book_container2'>";
@@ -47,7 +58,7 @@ if(isset($_POST['search'])) {
         
             if (!empty($row['img'])) {
                 $imagepath = $row['img'];
-                echo '<img src="../Code/upload/' . $imagepath . '" width="100" height="100" class="book_image" alt="img_book"><br>';
+                echo '<img src="../Code/upload/' . $imagepath . '" width="100" height="100" class="img_search" alt="img_book"><br>';
             }
         
             echo "<span>Informatie:</span> " . $row['informatie_boek'] . "<br>";

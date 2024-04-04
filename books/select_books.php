@@ -1,16 +1,20 @@
 <?php
 
-class Books
-{
+
+
+// Definieer de Books-klasse
+class Books{
+    // Eigenschappen van de klasse
     private $conn;
 
-    public function __construct($conn)
-    {
+
+    // Constructor methode om de eigenschappen van de klasse in te stellen
+    public function __construct($conn){
         $this->conn = $conn;
     }
 
-    public function Selectallbooks()
-    {
+    // Methode om gegevens uit de database te selecteren
+    public function Selectallbooks(){
         $query = "SELECT * FROM boeken WHERE beschikbaarheid = 1";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
@@ -18,16 +22,17 @@ class Books
     }
 }
 
+// Maak een nieuw Books-object en roep de Selectallbooks-methode aan om alle boeken uit de database te selecteren
 $booksmanager = new Books($conn);
 $books = $booksmanager->Selectallbooks();
 
+
+//  Loop door de resultaten van de query en geef de boeken weer
 foreach ($books as $book) {
     echo "<div class='book_container'>" .
         "<div class='select_books'>" .
 
-
-
-        $book['titel']  .
+         $book['titel']  .
         "<div>ISBN: "  .   $book['isbn'] . "</div>"  . "<br>" .
         $book['schrijver'] . "<br>" .
         $book['uitgever'] .  "<br>" .
@@ -47,10 +52,5 @@ foreach ($books as $book) {
 
         . "</form>";
 
-
-
-
-
-
-    echo "</div></div></div></div>";
+  echo "</div></div></div></div>";
 }

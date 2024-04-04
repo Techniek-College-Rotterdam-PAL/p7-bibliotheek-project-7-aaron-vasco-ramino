@@ -10,17 +10,28 @@
 
 <body>
 <?php
+
+// bestand voor navigatiebalk
 include '../Code/nav_docent.php';
+
+// bestand voor sessie
 include '../account/session_function_docent.php';
+
+// bestand voor database connectie
 require_once '../Code/db.php';
 
- class Reservedbooks {
-    private $conn;
 
+  // Definieer de Reservedbooks-klasse
+ class Reservedbooks {
+    // Eigenschappen van de klasse
+    private $conn;
+    
+    // Constructor methode om de eigenschappen van de klasse in te stellen
     public function __construct($conn) {
         $this->conn = $conn;
     }
-
+    
+    // Methode om gegevens in de database te selecteren
     public function Selectreservedbooks() {
         $query = "SELECT * FROM reserveren";
         $stmt = $this->conn->prepare($query);
@@ -28,10 +39,12 @@ require_once '../Code/db.php';
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-
+ // Maak een object van de klasse Reservedbooks aan en roep de methode Selectreservedbooks aan
 $reservedbooks = new Reservedbooks($conn);
 $reservedBooks = $reservedbooks->Selectreservedbooks();
 
+
+// Loop door de gegevens en geef deze weer
 foreach ($reservedBooks as $reservedbook) {
     echo "<div class='student_reserved'>  Voornaam: " . $reservedbook['voornaam'] . " Achternaam: " . $reservedbook['achternaam'] . 
     " Titel: " . $reservedbook['titel'] . " Isbn: " . $reservedbook['isbn'] . " Time: " . $reservedbook['time'] .
@@ -40,6 +53,7 @@ foreach ($reservedBooks as $reservedbook) {
                "</div>";
 }
 
+// bestand voor footer
 require '../Code/footer.php';
 ?>
 

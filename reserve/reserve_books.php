@@ -1,9 +1,13 @@
 <?php
-
+ // bestand voor sessie functie
 require_once '../account/session_function.php';
+
+// bestand voor database connectie
 require_once '../Code/db.php';
 
+// Definieer de Reserve-klasse
 class Reserve {
+    // Eigenschappen van de klasse
     private $conn;
     private $id;
     private $first_name;
@@ -12,9 +16,11 @@ class Reserve {
     private $current_time;
     private $isbn;
     private $account_id;
+    
 
+    // Constructor methode om de eigenschappen van de klasse in te stellen
     public function __construct($conn, $id, $account_id, $first_name, $last_name, $titel, $current_time, $isbn) { 
-        $this->conn = (new Database_connect())->Connect(); 
+        $this->conn =$conn; 
         $this->id = $id;
         $this->first_name = $first_name;
         $this->last_name = $last_name;
@@ -23,7 +29,7 @@ class Reserve {
         $this->isbn = $isbn;
         $this->account_id = $account_id;
     }
-      
+      // Methode om gegevens in de database te reserveren
     public function Reserve() {
         $query = "INSERT INTO reserveren (boek_id, account_id, voornaam, achternaam, titel, isbn, time) VALUES (:boek_id, :account_id, :voornaam, :achternaam, :titel, :isbn, :time)";
         $stmt = $this->conn->prepare($query);
@@ -39,8 +45,9 @@ class Reserve {
         echo "U heeft het boek gereserveerd";
     }
 }    
-
+// Definieer de Updatestock-klasse
 class Updatestock {
+    // Eigenschappen van de klasse
     private $conn;
     private $id;
     private $stock;
@@ -50,7 +57,7 @@ class Updatestock {
         $this->id = $id;
         $this->stock = $stock;
     }
-
+     // Methode om de voorraad van een boek in de database bij te werken
     public function Updatestock() {
         if ($this->stock <= 0) {
             echo "Error: Stock cannot be negative or zero. Cannot reserve the book.";
@@ -58,7 +65,8 @@ class Updatestock {
         }
 
         $updatedStock = $this->stock - 1;
-
+        
+        // Update de voorraad van het boek
         $query = "UPDATE boeken SET voorraad = :voorraad WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':voorraad', $updatedStock, PDO::PARAM_INT);
@@ -69,6 +77,8 @@ class Updatestock {
     }
 }
 
+
+// Als het formulier is ingediend, worden de gegevens opgehaald en wordt de Reserve-klasse aangeroepen om de gegevens in de database te reserveren
 if(isset($_POST['submit'])){
     $first_name = $_SESSION['voornaam'];
     $last_name = $_SESSION['achternaam'];
@@ -79,13 +89,14 @@ if(isset($_POST['submit'])){
     echo $id;
 
     
-
+    // Selecteer het boek uit de database
     $query = "SELECT titel, voorraad, isbn FROM boeken WHERE id = :id";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    // Als het boek is gevonden, wordt de voorraad van het boek bijgewerkt en wordt het boek gereserveerd
     if ($row) {
         $titel = $row['titel'];
         $stock = $row['voorraad'];
