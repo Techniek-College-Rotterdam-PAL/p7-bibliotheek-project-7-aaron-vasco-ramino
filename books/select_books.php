@@ -32,7 +32,7 @@ foreach ($books as $book) {
     echo "<div class='book_container'>" .
         "<div class='select_books'>" .
 
-        $book['titel']  .
+        "Titel:" . $book['titel']  .
         "<div>Isbn: "  .   $book['isbn'] . "</div>"  . "<br>" .
         "Schrijver:" . $book['schrijver'] . "<br>" .
         "Uitgever:" .  $book['uitgever'] .  "<br>" .
@@ -41,7 +41,7 @@ foreach ($books as $book) {
         $imagepath = $book['img'];
         echo '<img src="../Code/upload/' . $imagepath . '"class="img_search" height="150px" width="130px "alt="img_book" ><br>';
     }
-    echo $book['informatie_boek'];
+    echo "Informatie:" . " " .  $book['informatie_boek'];
     echo "<div class='voorraad'>Voorraad: " . $book['voorraad'] . "</div>";
 
 

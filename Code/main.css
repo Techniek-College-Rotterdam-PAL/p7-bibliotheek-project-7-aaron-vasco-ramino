@@ -333,8 +333,8 @@ img.book_image {
 }
 
 button.reserve {
-  margin-left: 90px;
-  margin-top: 50px;
+  
+  margin-top: 14px;
   padding: 7px 15px;
   border-style: solid;
   border-radius: 10px;
@@ -389,7 +389,11 @@ button.button_update_available {
   padding: 7px 10px;
   margin-top: 20px;
 }
+img.img_reserve{
+ margin-top: 10px;
+ margin-bottom:10px ;
 
+}
 /* BOOKS AVAILABLE END */
 
 /* STUDENT_RESERVED */

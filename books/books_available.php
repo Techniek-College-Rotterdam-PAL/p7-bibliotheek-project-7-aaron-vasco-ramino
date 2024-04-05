@@ -54,7 +54,7 @@
 
     if (!empty($book['img'])) {
         $imagepath = $book['img'];
-        echo '<img src="../Code/upload/' . $imagepath . '" width="100" height="100" class="book_image" alt="img_book"><br>';
+        echo '<img src="../Code/upload/' . $imagepath . '" width="100" height="100" class="img_reserve" alt="img_book"><br>';
     }
     
     
