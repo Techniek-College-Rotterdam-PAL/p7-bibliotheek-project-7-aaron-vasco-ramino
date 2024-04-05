@@ -68,10 +68,10 @@ class Books_create {
                 
                 $stmt->execute();
             } else {
-                echo "Sorry, there was an error uploading your file.";
+                echo "Sorry, er is een fout opgetreden bij het uploaden van de afbeelding.";
             }
         } else {
-            echo "Sorry, only JPG, JPEG, PNG, and GIF files are allowed.";
+            echo "Sorry, alleen JPG, JPEG, PNG & GIF-bestanden zijn toegestaan.";
         }
     }
 }
@@ -86,7 +86,7 @@ if(isset($_POST['submit'])){
     $storage = strip_tags($_POST['amount']);
     $image = $_FILES['image'];
 
-    $books = new Books_create($title, $isbn, $writer, $publisher, $release_year, $book_information, $image, $storage);
+    $books = new Books_create($title, $isbn, $writer, $publisher, $release_year, $book_information, $image, $storage,$conn);
     $books->Insertbooks();
 }
 
