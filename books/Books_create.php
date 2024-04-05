@@ -28,7 +28,7 @@
         <input class="create_book_input" type="text" placeholder="uitgever" required name="publisher">
         <input class="create_book_input" type="text" placeholder="boekjaar" required name="release_year">
         <textarea class="create_book_input" cols="100" rows="100" placeholder="Samenvatting" required name="book_information"></textarea>
-        <input class="create_book_input" type="text" placeholder="Voorraad" required name="amount">
+        <input class="create_book_input" type="number" placeholder="Voorraad" required name="amount">
         <input class="create_book_input_img" type="file" placeholder="afbeelding" required name="image">
 
 
