@@ -319,6 +319,7 @@ div.book_container {
   margin-top: 20px;
   border: 2px solid #ccc;
   padding: 20px;
+  font-size: 20px;
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -336,9 +337,9 @@ img.book_image {
 }
 
 button.reserve {
-  margin-right: -135px;
-  margin-top: 170px;
-  padding: 7px 10px;
+  margin-right: -123px;
+  margin-top: 195px;
+  padding: 7px 15px;
   border-style: solid;
   border-radius: 10px;
   border-color: white;
@@ -506,7 +507,7 @@ p.main-page {
   gap: 140px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    align-content: center;
+  align-content: center;
 }
 h2.contact-title {
   font-weight: bolder;
@@ -552,8 +553,8 @@ a.reserve {
     "Lucida Sans", Arial, sans-serif;
 }
 
-img.img_search{
-  margin-top:10px ;
+img.img_search {
+  margin-top: 10px;
 }
 
 /* ACCESS DENIED */

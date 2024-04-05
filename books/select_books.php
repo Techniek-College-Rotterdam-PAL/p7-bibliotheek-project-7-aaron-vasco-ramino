@@ -1,18 +1,21 @@
 <?php
 
 // Definieer de Books-klasse
-class Books{
+class Books
+{
     // Eigenschappen van de klasse
     private $conn;
 
 
     // Constructor methode om de eigenschappen van de klasse in te stellen
-    public function __construct($conn){
+    public function __construct($conn)
+    {
         $this->conn = $conn;
     }
 
     // Methode om gegevens uit de database te selecteren
-    public function Selectallbooks(){
+    public function Selectallbooks()
+    {
         $query = "SELECT * FROM boeken WHERE beschikbaarheid = 1";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
@@ -30,11 +33,11 @@ foreach ($books as $book) {
     echo "<div class='book_container'>" .
         "<div class='select_books'>" .
 
-         $book['titel']  .
-        "<div>ISBN: "  .   $book['isbn'] . "</div>"  . "<br>" .
-        $book['schrijver'] . "<br>" .
-        $book['uitgever'] .  "<br>" .
-        $book['boekjaar'] .  "<br>";
+        $book['titel']  .
+        "<div>Isbn: "  .   $book['isbn'] . "</div>"  . "<br>" .
+        "Schrijver:" . $book['schrijver'] . "<br>" .
+        "Uitgever:" .  $book['uitgever'] .  "<br>" .
+        "Boekjaar:" . $book['boekjaar'] .  "<br>";
     echo $book['informatie_boek'];
     echo "<div class='voorraad'>Voorraad: " . $book['voorraad'] . "</div>";
 
@@ -43,12 +46,12 @@ foreach ($books as $book) {
 
     if (!empty($book['img'])) {
         $imagepath = $book['img'];
-        echo '<img src="../Code/upload/' . $imagepath . '"class="book_image" height="180px" width="160px "alt="img_book" ><br>';
+        echo '<img src="../Code/upload/' . $imagepath . '"class="book_image" height="120px" width="115px "alt="img_book" ><br>';
     }
     echo "<form method='post' action='../reserve/reserve_books.php'>";
     echo "<button class='reserve' name='submit' value='" . $book['id']  . "' class=''>reserveren</button>"
 
         . "</form>";
 
-  echo "</div></div></div></div>";
+    echo "</div></div></div></div>";
 }
