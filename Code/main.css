@@ -313,35 +313,28 @@ input.submit_book:hover {
 
 div.book_container {
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 300px;
+  max-width: 100%;
   margin: 10px;
   margin-top: 20px;
-  border: 2px solid #ccc;
-  padding: 20px;
-  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-   
-  
-    
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
-.select_books {
-  columns: 100px 8;
-  direction: rtl;
-  padding: 10px;
-}
 img.book_image {
-  display: flex;
-  position: relative;
-  float: left;
+  height: 150px;
+  width: 250px;
 }
 
 button.reserve {
-  margin-right: -123px;
-  margin-top: 195px;
+  margin-left: 90px;
+  margin-top: 50px;
   padding: 7px 15px;
   border-style: solid;
   border-radius: 10px;
