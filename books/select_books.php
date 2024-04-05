@@ -1,8 +1,7 @@
 <?php
 
 // Definieer de Books-klasse
-class Books
-{
+class Books{
     // Eigenschappen van de klasse
     private $conn;
 
