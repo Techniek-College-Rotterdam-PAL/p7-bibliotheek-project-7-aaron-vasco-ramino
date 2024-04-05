@@ -322,6 +322,9 @@ div.book_container {
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+   
+  
+    
 }
 
 .select_books {
@@ -417,6 +420,7 @@ form.delete_reserved {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  overflow-wrap: break-word;
 }
 
 div.succes_section {

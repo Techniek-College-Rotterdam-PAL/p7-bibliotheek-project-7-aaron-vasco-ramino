@@ -56,7 +56,8 @@
         $imagepath = $book['img'];
         echo '<img src="../Code/upload/' . $imagepath . '" width="100" height="100" class="book_image" alt="img_book"><br>';
     }
-     
+    
+    
     echo  "Beschikbaarheid: " . ($book['beschikbaarheid'] ? 'Beschikbaar' : 'Niet-beschikbaar') . "<br>";
     echo  "<form method='post' action='../books/update_books_available.php'>" . 
     "<button class='button_update_available'  type='submit' name='submit' value='" . $book['id']   . "'>Beschikbaarheid</button>";
