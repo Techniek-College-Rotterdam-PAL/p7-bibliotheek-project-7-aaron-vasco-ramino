@@ -38,16 +38,17 @@ foreach ($books as $book) {
         "Schrijver:" . $book['schrijver'] . "<br>" .
         "Uitgever:" .  $book['uitgever'] .  "<br>" .
         "Boekjaar:" . $book['boekjaar'] .  "<br>";
+    if (!empty($book['img'])) {
+        $imagepath = $book['img'];
+        echo '<img src="../Code/upload/' . $imagepath . '"class="img_search" height="150px" width="130px "alt="img_book" ><br>';
+    }
     echo $book['informatie_boek'];
     echo "<div class='voorraad'>Voorraad: " . $book['voorraad'] . "</div>";
 
 
 
 
-    if (!empty($book['img'])) {
-        $imagepath = $book['img'];
-        echo '<img src="../Code/upload/' . $imagepath . '"class="book_image" height="120px" width="115px "alt="img_book" ><br>';
-    }
+
     echo "<form method='post' action='../reserve/reserve_books.php'>";
     echo "<button class='reserve' name='submit' value='" . $book['id']  . "' class=''>reserveren</button>"
 
