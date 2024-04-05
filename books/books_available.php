@@ -46,11 +46,11 @@
     foreach ($books as $book) {
     echo "<div class='book_container'>" .  
         "<div class='books'>" .
-        $book['titel'] . "<br>" .    
-        "ISBN:" . " " . $book['isbn'] . "<br>" .
-        $book['schrijver'] . "<br>" .
-        $book['uitgever'] .  "<br>" .
-        $book['boekjaar'] .  "<br>";
+         "Titel:" . " " . $book['titel'] . "<br>" .    
+        "Isbn:" . " " . $book['isbn'] . "<br>" .
+        "Schrijver:" . " " .  $book['schrijver'] . "<br>" .
+        "Uitgever:" . " " . $book['uitgever'] .  "<br>" .
+         "Boekjaar:" . " " .$book['boekjaar'] .  "<br>";
 
     if (!empty($book['img'])) {
         $imagepath = $book['img'];
