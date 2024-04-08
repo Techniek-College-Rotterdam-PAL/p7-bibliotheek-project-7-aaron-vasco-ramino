@@ -16,6 +16,15 @@ include '../account/session_function_docent.php';
 
 ?>
 
+    <h2 class="main-page">Docenten pagina</h2>
+    <p class="main-page">
+        welkom bij de docenten pagina, hier vindt jij een <br>
+        overzicht van alle rechten die je als docent hebt op deze<br>
+        website.
+
+    <?php
+    include 'footer.php'; ?>
+
 </body>
 
 </html>
