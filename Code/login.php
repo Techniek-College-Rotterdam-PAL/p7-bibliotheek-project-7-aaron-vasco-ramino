@@ -33,7 +33,7 @@ include 'nav.php';
     </form>
 
    
-   <?php include 'footer.php'; ?>
+   
 
 
 

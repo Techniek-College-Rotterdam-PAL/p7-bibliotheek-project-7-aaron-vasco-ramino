@@ -41,7 +41,7 @@
 
 
             <li>
-                <a class="nav_page_link-docent" href="../reserve/student_reserved.php">gereserveerde boeken</a>
+                <a class="nav_page_link-docent" href="../reserve/student_reserved.php">Gereserveerde boeken</a>
             </li>
             <li>
                 <a class="nav_page_link-docent" href="../Code/docent.php">Docent</a>
@@ -56,7 +56,7 @@
             </form>
 
             <li>
-                <a class="nav_page_link-login-docent" href="../books/books_available.php">boeken</a>
+                <a class="nav_page_link-login-docent" href="../books/books_available.php">Boeken</a>
 
             <li>
                 <a class="nav_page_link-login-docent" href="../Code/login.php">Inloggen</a>

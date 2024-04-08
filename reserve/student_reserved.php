@@ -53,8 +53,7 @@ foreach ($reservedBooks as $reservedbook) {
                "</div>";
 }
 
-// bestand voor footer
-require '../Code/footer.php';
+
 ?>
 
 
