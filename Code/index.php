@@ -44,7 +44,6 @@ thrillers, misdaad, poëzie en nog veel meer!
 </p>
 
 
-<div class="text-and-image">
 <h2 class="main-page">Wat te doen</h2>
 <p class="main-page">
 Bij de bib kun je boeken die je nodig hebt voor school lenen, ook hebben wij<br>

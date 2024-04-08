@@ -27,6 +27,24 @@ include '../account/session_function_docent.php';
         website.
 </p>
 
+
+<h2 class="main-page">Wat kan je allemaal doen?</h2>
+<p class="teacher-page">
+Als docent hebt u waarschijnlijk eens gehoord van studenten<br>
+die geen boeken kunnen aanschaffen, en de 'potjes' die daarvoor<br>
+gemaakt worden helpen eigenlijk niet door de grote vraag <br>
+naar boeken. Deze website is gemaakt om dat te veranderen.<br>
+Als docent kunt u veel dingen doen op deze website, wilt u<br>
+een boek toevoegen? Dat kan vanaf de "boek toevoegen" knop aan<br>
+de bovenkant van de website. Wilt u weten wanneer een boek <br>
+uitgeleend werd en door wie? dat kan makkelijk vanaf de <br>
+"gereserveerde boeken" pagina. Dit en veel meer kunt u <br>
+doen op deze website. Als u als docent een vraag hebt <br>
+kunt u makkelijk contact met ons opnemen. u vindt onze <br>
+contactgegevens aan het eind van de hoofdpagina. <br>
+</p>
+
+
     <?php
     include 'footer.php'; ?>
 
