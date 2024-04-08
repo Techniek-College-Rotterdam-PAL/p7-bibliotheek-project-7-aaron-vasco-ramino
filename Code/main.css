@@ -526,6 +526,22 @@ h2.contact-title {
 }
 /*MAIN PAGE END */
 
+/*TEACHER PAGE START */
+
+.teacher-image {
+  text-align: center;
+  
+}
+p.teacher-page {
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*TEACHER PAGE END */
+
 /*BOOKS SEARCH */
 
 div.book_container2 {
