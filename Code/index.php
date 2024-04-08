@@ -56,22 +56,25 @@ een account aanmaken als jij nog geen account hebt voordat jij een van onze boek
 
 </p>
 
+<div class="contact-address-row">
 <div class="contact-address">
 <h2 class="contact-title">Contactgegevens</h2>
-<p > 
+<p> 
 Heb jij vragen over hoe jij bijvoorbeeld een boek<br>
  moet reserveren of een account kan aanmaken? <br>
  Dan kun jij ons bereiken via telefoon of email<br><br>
 Email: debib@contact.nl<br>
 Telefoonnummer: +31 683451790
-
 </p>
+</div>
 
+<div class="contact-address">
 <h2 class="contact-title">Adres</h2>
 <p>
 Hoogstraat 110<br>
 3011 PV Rotterdam
 </p>
+</div>
 </div>
 
  <?php 

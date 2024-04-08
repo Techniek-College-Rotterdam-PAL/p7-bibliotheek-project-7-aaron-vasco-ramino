@@ -487,8 +487,12 @@ p.main-page {
   color: rgb(255, 255, 255);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+}
+
+p {
+  margin: 0%;
 }
 .main-page {
   display: flex;
@@ -498,14 +502,20 @@ p.main-page {
 .index-image {
   text-align: center;
 }
-
-.contact-address {
-  margin-top: 140px;
-  color: #ccc;
+.contact-address-row {
   display: flex;
   flex-direction: row;
+  text-align: center;  
   justify-content: center;
-  gap: 140px;
+  gap: 560px;
+}
+
+.contact-address {
+  margin-top: 90px;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   align-content: center;
@@ -515,6 +525,22 @@ h2.contact-title {
   color: white;
 }
 /*MAIN PAGE END */
+
+/*TEACHER PAGE START */
+
+.teacher-image {
+  text-align: center;
+  
+}
+p.teacher-page {
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*TEACHER PAGE END */
 
 /*BOOKS SEARCH */
 
