@@ -18,13 +18,13 @@
         <h1 class="account">Nieuw boek toevoegen</h1>
         <input class="create_account_input" placeholder="Titel" required name="title" id="title">
         <div name=""></div>
-        <input class="create_book_input" type="text" placeholder="Isbn" required name="isbn">
-        <input class="create_book_input" type="text" placeholder="Schrijver" required name="writer">
-        <input class="create_book_input" type="text" placeholder="Uitgever" required name="publisher">
-        <input class="create_book_input" type="text" placeholder="Boekjaar" required name="release_year">
-        <textarea class="create_book_input" cols="100" rows="100" placeholder="Samenvatting" required name="book_information"></textarea>
-        <input class="create_book_input" type="number" placeholder="Voorraad" required name="amount">
-        <input class="create_book_input_img" type="file" placeholder="afbeelding" required name="image">
+        <input class="create_book_input" type="text" placeholder="Isbn" required name="isbn" id="isbn">
+        <input class="create_book_input" type="text" placeholder="Schrijver" required name="writer" id="writer">
+        <input class="create_book_input" type="text" placeholder="Uitgever" required name="publisher" id="publisher">
+        <input class="create_book_input" type="text" placeholder="Boekjaar" required name="release_year" id="release_year">
+        <textarea class="create_book_input" cols="100" rows="100" placeholder="Samenvatting" required name="book_information" id="book_information"></textarea>
+        <input class="create_book_input" type="number" placeholder="Voorraad" required name="amount" id="amount">
+        <input class="create_book_input_img" type="file" placeholder="afbeelding" required name="image" id="image" > 
 
 
 

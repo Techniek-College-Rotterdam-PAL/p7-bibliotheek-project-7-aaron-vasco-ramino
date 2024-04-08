@@ -35,6 +35,46 @@ if (errormessage) {
   errordiv.textContent = errormessage;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Your code here
+  document.getElementById("isbn").addEventListener("change", function() {
+      var isbn = this.value;
+      fetchBook(isbn);
+  });
+
+
+});
+
+
+function fetchBook(isbn) {
+  var apiKey = "AIzaSyBGPkZ2RXBnBUSoMXT6cFU5W1NW8qSOy-o";
+  var url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn + "&key=" + apiKey;
+
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          displayBook(data);
+      })
+      .catch(error => console.error(error));
+}
+
+function displayBook(data) {
+  if (data.totalItems > 0) {
+      var book = data.items[0].volumeInfo;
+      document.getElementById("title").value = book.title || '';
+      document.getElementById("writer").value = (book.authors && book.authors.length > 0) ? book.authors.join(', ') : '';
+      document.getElementById("publisher").value = book.publisher || '';
+      document.getElementById("release_year").value = book.publishedDate || '';
+      document.getElementById("book_information").value = book.description || '';
+      // You can update other form fields as needed
+
+  } else {
+      console.log("No book found for the provided ISBN.");
+  }
+}
+
+
+
 
 
  
