@@ -18,8 +18,8 @@
 
  session_start();
 
-require_once 'db.php';
-include 'nav.php';
+require_once '../Code/db.php';
+include '../Code/nav.php';
 
 
 ?>
