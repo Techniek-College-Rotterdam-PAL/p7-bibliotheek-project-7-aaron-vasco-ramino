@@ -31,7 +31,6 @@ $books = $booksmanager->Selectallbooks();
 foreach ($books as $book) {
     echo "<div class='book_container'>" .
         "<div class='select_books'>" .
-
         "Titel:" . $book['titel']  .
         "<div>Isbn: "  .   $book['isbn'] . "</div>"  . "<br>" .
         "Schrijver:" . $book['schrijver'] . "<br>" .
@@ -43,9 +42,6 @@ foreach ($books as $book) {
     }
     echo "Informatie:" . " " .  $book['informatie_boek'];
     echo "<div class='voorraad'>Voorraad: " . $book['voorraad'] . "</div>";
-
-
-
 
 
     echo "<form method='post' action='../reserve/reserve_books.php'>";

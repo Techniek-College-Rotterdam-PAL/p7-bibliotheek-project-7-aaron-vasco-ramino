@@ -12,19 +12,19 @@ class Reserve {
     private $id;
     private $first_name;
     private $last_name;
-    private $titel;
+    private $title;
     private $current_time;
     private $isbn;
     private $account_id;
     
 
     // Constructor methode om de eigenschappen van de klasse in te stellen
-    public function __construct($conn, $id, $account_id, $first_name, $last_name, $titel, $current_time, $isbn) { 
+    public function __construct($conn, $id, $account_id, $first_name, $last_name, $title, $current_time, $isbn) { 
         $this->conn =$conn; 
         $this->id = $id;
         $this->first_name = $first_name;
         $this->last_name = $last_name;
-        $this->titel = $titel;
+        $this->title = $title;
         $this->current_time = $current_time;
         $this->isbn = $isbn;
         $this->account_id = $account_id;
@@ -37,7 +37,7 @@ class Reserve {
         $stmt->bindParam(':account_id', $this->account_id, PDO::PARAM_INT);
         $stmt->bindParam(':voornaam', $this->first_name, PDO::PARAM_STR);
         $stmt->bindParam(':achternaam', $this->last_name, PDO::PARAM_STR);
-        $stmt->bindParam(':titel', $this->titel, PDO::PARAM_STR);
+        $stmt->bindParam(':titel', $this->title, PDO::PARAM_STR);
         $stmt->bindParam(':isbn', $this->isbn, PDO::PARAM_STR);
         $stmt->bindParam(':time', $this->current_time, PDO::PARAM_STR);
         $stmt->execute();
@@ -53,7 +53,7 @@ class Updatestock {
     private $stock;
 
     public function __construct($conn, $id, $stock) {
-        $this->conn = (new Database_connect())->Connect();
+        $this->conn = $conn;
         $this->id = $id;
         $this->stock = $stock;
     }
@@ -64,12 +64,12 @@ class Updatestock {
             return;
         }
 
-        $updatedStock = $this->stock - 1;
+        $updatedstock = $this->stock - 1;
         
         // Update de voorraad van het boek
         $query = "UPDATE boeken SET voorraad = :voorraad WHERE id = :id";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':voorraad', $updatedStock, PDO::PARAM_INT);
+        $stmt->bindParam(':voorraad', $updatedstock, PDO::PARAM_INT);
         $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
         $stmt->execute();
 
@@ -98,7 +98,7 @@ if(isset($_POST['submit'])){
 
     // Als het boek is gevonden, wordt de voorraad van het boek bijgewerkt en wordt het boek gereserveerd
     if ($row) {
-        $titel = $row['titel'];
+        $title = $row['titel'];
         $stock = $row['voorraad'];
         $isbn = $row['isbn'];
 
@@ -106,7 +106,7 @@ if(isset($_POST['submit'])){
             echo "Error: Stock is zero or less. Cannot reserve the book.";
             header("Location: ../reserve/books_reserved_error.php");
         } else {
-            $reserve = new Reserve($conn, $id, $account_id, $first_name, $last_name, $titel, $current_time, $isbn);
+            $reserve = new Reserve($conn, $id, $account_id, $first_name, $last_name, $title, $current_time, $isbn);
             $reserve->Reserve();
 
             $updatestock = new Updatestock($conn, $id, $stock);

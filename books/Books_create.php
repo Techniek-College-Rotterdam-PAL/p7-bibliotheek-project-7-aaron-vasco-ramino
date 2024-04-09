@@ -48,12 +48,12 @@
             // Voeg een eventlistener toe aan het ISBN-veld en kijk of het ISBN is gewijzigd
             document.getElementById("isbn").addEventListener("change", function () {
                 var isbn = this.value; // haal de waarde van het ISBN-veld op
-                fetchBook(isbn); // haal de boekgegevens op
+                Fetchbook(isbn); // haal de boekgegevens op
             });
         });
 
 
-        function fetchBook(isbn) {
+        function Fetchbook(isbn) {
 
             // Definieer de Google Books API-sleutel en de URL
             var apiKey = "AIzaSyBGPkZ2RXBnBUSoMXT6cFU5W1NW8qSOy-o";
@@ -67,14 +67,14 @@
 
                 // Roep de functie aan met de krijgen data
                 .then(data => {
-                    displayBook(data);
+                    Displaybook(data);
                 })
                 // Vang fouten op
                 .catch(error => console.error(error));
         }
 
         // Toon de boekgegevens in een formulier
-        function displayBook(data) {
+        function Displaybook(data) {
 
             // Controleer of er boeken zijn gevonden uit het ISBN
             if (data.totalItems > 0) {

@@ -1,5 +1,5 @@
 <?php
-// start session
+
 session_start();
 ?>
 
@@ -15,7 +15,6 @@ session_start();
 <body>
 
  <?php 
- // include the navigation bar
  include '../Code/nav.php'; 
  ?>
 
@@ -77,13 +76,11 @@ Hoogstraat 110<br>
 </div>
 
  <?php 
- // include the footer
  include 'footer.php'; ?>
 </body>
 </html>
 
 <?php
-// destroy the session
 session_destroy();
 
 ?>
