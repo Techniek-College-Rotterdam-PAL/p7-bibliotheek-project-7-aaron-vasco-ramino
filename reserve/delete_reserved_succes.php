@@ -18,9 +18,6 @@
     <a href="../reserve/student_reserved.php" class="back_reserved">Terug naar overzicht</a>
      </div>
 
-     <?php
-    include '../Code/footer.php';
-     ?>
-
+     
 </body>
 </html>

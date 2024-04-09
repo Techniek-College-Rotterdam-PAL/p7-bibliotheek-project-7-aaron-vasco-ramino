@@ -7,9 +7,9 @@ class Books{
 
 
     // Constructor methode om de eigenschappen van de klasse in te stellen
-    public function __construct($conn)
-    {
+    public function __construct($conn){
         $this->conn = $conn;
+        
     }
 
     // Methode om gegevens uit de database te selecteren

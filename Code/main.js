@@ -1,13 +1,19 @@
 
 // email validatie en error bericht
 function validateEmail() {
+  // haal input veld op en zet deze in een variabele 
   var emailInput = document.getElementById("email");
+  // error bericht als het emailadres niet geldig is 
   var emailError = "Gebruik een geldig emailadres met het domein @student.zadkine.nl of @tcrmbo.nl of student.tcrmbo.nl.";
+  // array met toegestane domeinen
   var allowedDomains = ["student.zadkine.nl", "tcrmbo.nl", "student.tcrmbo.nl"];
-
+   
+  // haal de email op en zet deze in een variabele  
   var email = emailInput.value.trim().toLowerCase();
+  // haal het domein op en zet deze in een variabele
   var domain = email.split("@")[1];
 
+  // als het emailadres niet geldig is, geef een error bericht en return false
   if (allowedDomains.indexOf(domain) === -1) {
     emailError = alert(
       "Gebruik een geldig emailadres met het domein @student.zadkine.nl of @tcrmbo.nl of @student.tcrmbo.nl."
