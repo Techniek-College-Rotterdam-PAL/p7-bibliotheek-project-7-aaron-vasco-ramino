@@ -23,9 +23,9 @@ function validateEmail() {
     return true;
   }
 }
-
+document.addEventListener("DOMContentLoaded", function () {
 // wachtwoord validatie en error bericht
-function Getparameterbyname(name, url) {
+function getparameterbyname(name, url) {
   // als er geen url is, gebruik de huidige url
   if (!url) url = window.location.href;
   // naam van de parameter escapen
@@ -38,18 +38,20 @@ function Getparameterbyname(name, url) {
   // als er geen resultaten zijn, return ''
   if (!results[2]) return '';
   // decodeer de parameter en return deze als string 
-  return DecodeURIComponent(results[2].replace(/\+/g, " "));
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 // haal de error parameter op en decodeer deze 
-var errormessage = Getparameterbyname('error');
+var errormessage = getparameterbyname('error');
 
 // als er een error is, decodeer deze en zet deze in de error div
 if (errormessage) {
-  errormessage = DecodeURIComponent(errormessage);
-  var errordiv = document.querySelector('.email_password_error');
-  errordiv.textContent = errormessage;
+  errormessage =  decodeURIComponent(errormessage);
+  var errordiv = document.getElementById('email_password_error');
+  errordiv.innerHTML = errormessage;
 }
+
+});
 
 
 
