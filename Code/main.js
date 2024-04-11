@@ -23,23 +23,35 @@ function validateEmail() {
     return true;
   }
 }
+
+// Wacht tot het DOM geladen is
 document.addEventListener("DOMContentLoaded", function () {
-  // wachtwoord validatie en error bericht
+  // Functie voor het ophalen van een queryparameter uit een URL
   function getparameterbyname(name, url) {
-    // als er geen url is, gebruik de huidige url
+    // Als geen URL is opgegeven, gebruik de huidige URL
     if (!url) url = window.location.href;
-    // naam van de parameter escapen
+    
+    // Escapen van speciale tekens in de parameter naam
     name = name.replace(/[\[\]]/g, "\\$&");
-    // regex om de parameter te vinden
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-    // als er geen resultaten zijn, return null
+    
+    // Regex om de parameter in de URL te vinden
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+    
+    // Uitvoeren van de regex op de URL
+    var results = regex.exec(url);
+    
+    // Als er geen resultaten zijn gevonden, retourneer null
     if (!results) return null;
-    // als er geen resultaten zijn, return ''
+    
+    // Als de parameterwaarde leeg is, retourneer ''
     if (!results[2]) return '';
-    // decodeer de parameter en return deze als string 
+    
+    // Decoderen van de parameterwaarde en retourneren als string 
     return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
+
+
+
 
   // haal de error parameter op en decodeer deze 
   var errormessage = getparameterbyname('error');
