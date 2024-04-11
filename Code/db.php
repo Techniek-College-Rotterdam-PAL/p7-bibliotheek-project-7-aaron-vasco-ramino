@@ -41,7 +41,3 @@ catch(Exception $e){
 
 
 ?>
-
-
-
-

@@ -10,9 +10,9 @@
 
 <body>
     <?php
-    // include database connection
+    
     require_once 'db.php';
-    // include the navigation bar
+    
     include 'nav.php';
 
     ?>
@@ -31,7 +31,7 @@
 
 
     <?php 
-    // include the footer
+    
     include 'footer.php'; 
     ?>
     <script src="main.js"></script>

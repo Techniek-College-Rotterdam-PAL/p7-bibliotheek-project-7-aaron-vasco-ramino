@@ -15,7 +15,7 @@
 
     ?>
 
-    <div class="succes_section">
+  <div class="succes_section">
     <div class="access_denied">Je hebt geen toegang tot deze pagina</div>
     <a href="../Code/index.php" class="access_denied">Terug naar hoofdpagina</a>
   </div>

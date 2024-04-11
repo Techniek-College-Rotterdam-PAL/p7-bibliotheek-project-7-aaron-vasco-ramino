@@ -18,8 +18,8 @@
 
  session_start();
 
-require_once '../Code/db.php';
-include '../Code/nav.php';
+ require_once '../Code/db.php';
+ include '../Code/nav.php';
 
 
 ?>
@@ -32,14 +32,15 @@ include '../Code/nav.php';
         <input class="submit_account" type="submit" value="Login" name="submit">
     </form>
 
-   
-   
 
 
 
-   
+
+
+
     <script src="../Code/main.js"></script>
 
-  
+
 </body>
+
 </html>

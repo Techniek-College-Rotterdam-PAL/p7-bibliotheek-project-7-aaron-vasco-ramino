@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #131313;
 }
+
 nav {
   display: flex;
   justify-content: center;
@@ -51,6 +52,7 @@ li a {
   width: 60%;
   padding: 20px;
 }
+
 .searchbar input[type="search"] {
   width: 50%;
   border: none;
@@ -74,12 +76,14 @@ li a {
   padding: 25px;
   padding-right: 70px;
 }
+
 .searchbar-docent {
   padding-right: 35px;
   padding-top: 8px;
   width: 44%;
   padding: 20px;
 }
+
 .searchbar-docent input[type="search"] {
   width: 55%;
   border: none;
@@ -103,11 +107,13 @@ li a {
   padding: 25px;
   padding-right: 50px;
 }
+
 .nav_page_link-docent {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
 }
+
 .search-button {
   padding: 5px 10px;
   border-style: solid;
@@ -120,6 +126,7 @@ li a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
 .search-input {
   flex-grow: 1;
   padding: 5px;
@@ -203,6 +210,7 @@ input.submit_account {
 input.submit_account:hover {
   cursor: pointer;
 }
+
 div.session {
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -211,6 +219,7 @@ div.session {
   justify-content: center;
   margin-top: 10px;
 }
+
 div.email_password_error {
   color: red;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -233,6 +242,7 @@ form.create_book {
     "Lucida Sans", Arial, sans-serif;
   margin-top: 6px;
 }
+
 input.create_book_input {
   background-color: black;
   color: white;
@@ -242,10 +252,12 @@ input.create_book_input {
     "Lucida Sans", Arial, sans-serif;
   margin-top: 20px;
 }
+
 input.create_book_input_img {
   color: white;
   margin-top: 20px;
 }
+
 textarea.create_book_input {
   background-color: black;
   color: white;
@@ -293,6 +305,7 @@ input.submit_book:hover {
   width: 65px;
   height: 35px;
 }
+
 .copyright {
   text-decoration: none;
   color: white;
@@ -300,6 +313,7 @@ input.submit_book:hover {
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
 }
+
 .footer-names {
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -333,7 +347,7 @@ img.book_image {
 }
 
 button.reserve {
-  
+
   margin-top: 14px;
   padding: 7px 15px;
   border-style: solid;
@@ -356,6 +370,7 @@ h1.success_reserved {
   font-size: 20px;
   margin-left: 25px;
 }
+
 a.reserve_success {
   display: inline-block;
   margin-top: 10px;
@@ -389,11 +404,13 @@ button.button_update_available {
   padding: 7px 10px;
   margin-top: 20px;
 }
-img.img_reserve{
- margin-top: 10px;
- margin-bottom:10px ;
+
+img.img_reserve {
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
+
 /* BOOKS AVAILABLE END */
 
 /* STUDENT_RESERVED */
@@ -431,6 +448,7 @@ div.succes_section {
   margin-top: 50px;
   margin-left: 10px;
 }
+
 div.succes {
   font-size: 20px;
   margin-bottom: 20px;
@@ -474,6 +492,7 @@ h1.main-page {
   margin-top: 60px;
   font-size: 50px;
 }
+
 h2.main-page {
   font-weight: bolder;
   font-size: 30px;
@@ -494,18 +513,21 @@ p.main-page {
 p {
   margin: 0%;
 }
+
 .main-page {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .index-image {
   text-align: center;
 }
+
 .contact-address-row {
   display: flex;
   flex-direction: row;
-  text-align: center;  
+  text-align: center;
   justify-content: center;
   gap: 560px;
 }
@@ -520,18 +542,21 @@ p {
     "Lucida Sans", Arial, sans-serif;
   align-content: center;
 }
+
 h2.contact-title {
   font-weight: bolder;
   color: white;
 }
+
 /*MAIN PAGE END */
 
 /*TEACHER PAGE START */
 
 .teacher-image {
   text-align: center;
-  
+
 }
+
 p.teacher-page {
   color: rgb(255, 255, 255);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

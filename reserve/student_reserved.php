@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<?php
+    <?php
 
 // bestand voor navigatiebalk
 include '../Code/nav_docent.php';
@@ -58,4 +58,5 @@ foreach ($reservedBooks as $reservedbook) {
 
 
 </body>
+
 </html>

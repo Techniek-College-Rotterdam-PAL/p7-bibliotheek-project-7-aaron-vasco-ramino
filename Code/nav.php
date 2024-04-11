@@ -10,9 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         // Search functie voor de boeken
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Zoekfunctie voor de boeken in de database met behulp van AJAX request
-            $('#search').on('input', function(input) {
+            $('#search').on('input', function (input) {
                 // Voorkomt dat de standaard actie van het formulier wordt uitgevoerd
                 input.preventDefault();
                 // Zoekterm wordt opgehaald
@@ -27,7 +27,7 @@
                             search: searchterm
                         },
                         // De resultaten worden weergegeven in de div met id search-results
-                        success: function(response) {
+                        success: function (response) {
                             $('#search-results').html(response);
                         }
                     });

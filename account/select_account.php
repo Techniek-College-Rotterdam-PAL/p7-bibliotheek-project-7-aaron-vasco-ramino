@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="../Code/main.css">
     <title>Document</title>
 </head>
+
 <body>
-<?php
+    <?php
 // bestand voor database connectie
 require_once '../Code/db.php';
 
@@ -83,7 +84,8 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<script src="../Code/main.js"></script>
+    <script src="../Code/main.js"></script>
 
 </body>
+
 </html>

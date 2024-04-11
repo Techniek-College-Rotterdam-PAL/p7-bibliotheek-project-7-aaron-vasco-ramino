@@ -14,10 +14,11 @@
    include '../account/session_function_docent.php';
      ?>
     <div class="succes_section">
-    <div class="succes">Boek is ingeleverd en de voorraad is geüpdatet.</div>
-    <a href="../reserve/student_reserved.php" class="back_reserved">Terug naar overzicht</a>
-     </div>
+        <div class="succes">Boek is ingeleverd en de voorraad is geüpdatet.</div>
+        <a href="../reserve/student_reserved.php" class="back_reserved">Terug naar overzicht</a>
+    </div>
 
-     
+
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 <?php
 // // include database connection
 require_once '../Code/db.php';
@@ -60,5 +59,3 @@ exit();
 
 
 ?>
-    
-

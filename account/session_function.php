@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Code/main.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Code/main.css">
+  <title>Document</title>
 </head>
+
 <body>
-<?php
+  <?php
 
 
  // defineer de klasse Session
 class Session {
     // Constructor methode om de eigenschappen van de klasse in te stellen
-   function __construct() {
+   
+    function __construct() {
     $this->start();
 
 }
@@ -42,7 +45,8 @@ $session = new Session();
 
 
 ?>
-    
-    
+
+
 </body>
+
 </html>
