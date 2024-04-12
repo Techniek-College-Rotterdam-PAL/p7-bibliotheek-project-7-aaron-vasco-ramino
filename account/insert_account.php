@@ -23,7 +23,7 @@ class Insert_data_account{
 
     }
     // Methode om gegevens in de database in te voegen
-    public function Insert(){
+    public function Insert_account(){
         // Query om gegevens in de database in te voegen
         $query = "INSERT INTO account (voornaam, achternaam, email, wachtwoord) VALUES (:voornaam, :achternaam, :email, :password)";
         $stmt = $this->conn->prepare($query); // Bereid de query voor
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $account = new Insert_data_account($first_name, $last_name, $email, $password, $conn);
-    $account->Insert();
+    $account->Insert_account();
     
     
 
